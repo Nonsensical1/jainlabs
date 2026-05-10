@@ -15,60 +15,27 @@ export default function OutreachPage() {
           
           <div className="mt-6 space-y-8">
             <div>
-              <h3 className="font-medium text-foreground">Summer Research Program</h3>
-              <p className="text-muted-foreground">High School Students | June - August</p>
+              <h3 className="font-medium text-foreground">
+                <a href="https://www.floridamuseum.ufl.edu/earth-systems/scientist-in-every-florida-school/" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+                  Scientist in Every Florida School
+                </a>
+              </h3>
               <p className="mt-2 text-foreground">
-                An 8-week immersive program introducing high school students to computational biology research. 
-                Students work alongside lab members on real projects.
+                The Scientist in Every Florida School, a program within the Thompson Earth Systems Institute at UF bring together K-12 students and scientists for performing STEM research. Dr. Jain mentored 2 senior students from Palm Beach County School for Fall 2020 on CRISPR-based projects.
               </p>
             </div>
 
             <div>
-              <h3 className="font-medium text-foreground">Science Saturday Workshops</h3>
-              <p className="text-muted-foreground">K-12 Students & Families | Monthly, September - May</p>
+              <h3 className="font-medium text-foreground">MRET Program</h3>
               <p className="mt-2 text-foreground">
-                Monthly hands-on workshops exploring topics in science and technology. 
-                Activities are designed to be fun and accessible for all ages.
+                The Multidisciplinary Research Experiences for Teachers (MRET) is a program to bring together K-5 teachers, engineering faculty, and students into the lab for 6 weeks to bolster STEM research. The Jain lab hosted 2 teachers for the Summer 2019.
               </p>
             </div>
 
             <div>
-              <h3 className="font-medium text-foreground">Undergraduate Mentorship</h3>
-              <p className="text-muted-foreground">College Students | Year-round</p>
+              <h3 className="font-medium text-foreground">CRISPR Workshop</h3>
               <p className="mt-2 text-foreground">
-                One-on-one mentorship for undergraduates interested in research careers. 
-                Includes guidance on applications, research skills, and career development.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-foreground">Community Science Talks</h3>
-              <p className="text-muted-foreground">General Public | Quarterly</p>
-              <p className="mt-2 text-foreground">
-                Public lectures making cutting-edge research accessible to everyone. 
-                Topics range from AI in medicine to the future of biotechnology.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-12">
-          <h2 className="text-lg font-semibold text-foreground">Initiatives</h2>
-          
-          <div className="mt-6 space-y-6">
-            <div>
-              <h3 className="font-medium text-foreground">Diversity in STEM</h3>
-              <p className="mt-2 text-foreground">
-                We are committed to increasing representation of underrepresented groups in science. 
-                Our initiatives include targeted recruitment, mentorship programs, and partnerships with minority-serving institutions.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-foreground">Open Science</h3>
-              <p className="mt-2 text-foreground">
-                All our software is open-source and freely available. We publish preprints, share data openly, 
-                and contribute to community resources to accelerate scientific progress.
+                The Herbert Wertheim College of Engineering organized the 43rd Annual Summer Institute for the Southeastern Consortium for Minorities in Engineering (SECME) in June 2019. The Jain lab organized a CRISPR workshop for the teachers.
               </p>
             </div>
           </div>

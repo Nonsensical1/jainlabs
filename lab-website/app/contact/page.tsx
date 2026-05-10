@@ -7,29 +7,31 @@ export default function ContactPage() {
         </h1>
 
         <section className="mt-12">
-          <h2 className="text-lg font-semibold text-foreground">Lab Address</h2>
+          <h2 className="text-lg font-semibold text-foreground">Laboratory Address</h2>
           <address className="mt-4 text-foreground not-italic leading-relaxed">
-            Jain Lab<br />
-            Department of Bioengineering<br />
-            University of Washington<br />
-            Foege Building N430<br />
-            3720 15th Ave NE<br />
-            Seattle, WA 98195
+            NanoBiomolecular Precision Lab (Jain Lab)<br />
+            Cancer & Genetics Research Complex<br />
+            2033 Mowry Road, Room 375E<br />
+            Gainesville FL 32608
+          </address>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-lg font-semibold text-foreground">Office Address</h2>
+          <address className="mt-4 text-foreground not-italic leading-relaxed">
+            Prof. Piyush K. Jain<br />
+            1006 Center Dr., Room 329A<br />
+            Gainesville FL 32611<br />
+            Work phone: 352-294
           </address>
         </section>
 
         <section className="mt-12">
           <h2 className="text-lg font-semibold text-foreground">Email</h2>
-          <p className="mt-4 text-foreground">
-            General inquiries:{" "}
-            <a href="mailto:jainlab@uw.edu" className="underline hover:no-underline">
-              jainlab@uw.edu
-            </a>
-          </p>
           <p className="mt-2 text-foreground">
             Dr. Jain:{" "}
-            <a href="mailto:pjain@uw.edu" className="underline hover:no-underline">
-              pjain@uw.edu
+            <a href="mailto:pjain@ufl.edu" className="underline hover:no-underline">
+              pjain@ufl.edu
             </a>
           </p>
         </section>

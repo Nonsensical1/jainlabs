@@ -21,14 +21,14 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
-      <nav className="max-w-4xl mx-auto px-6 py-4">
+      <nav className="max-w-[1200px] mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-lg font-semibold text-foreground">
             Jain Lab
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-6 md:mr-4 lg:mr-10">
             {navItems.slice(1).map((item) => (
               <li key={item.href}>
                 <Link

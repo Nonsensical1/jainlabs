@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Interaction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <img src="https://img.icons8.com/?size=100&id=43556&format=png&color=FFFFFF" id="settingsButton" alt="Settings">
+    <div class="controls hidden">
+        <button id="resetButton">RESET</button>
+        <button id="randomizeButton">Randomize Forces</button>
+        <button id="viewForceMatrixButton">Force Matrix</button>
+        <button id="pauseResumeButton">Pause Reset Timer</button>
+        <div class="tooltip">
+            <input type="number" id="intervalInput" placeholder="Interval (s)" value="60" min="1">
+            <span class="tooltiptext"><b>Reset Timer</b><br /><i>Time in seconds before the next auto-reset and force
+                    randomization.</i><br /><i>Reset to Apply</i></span>
+        </div>
+        <div class="tooltip">
+            <input type="number" id="particleInput" placeholder="10-5000" value="1500" min="10" max="9000">
+            <span class="tooltiptext"><b>Particle Amount</b><br /><i>How many particles are on screen.</i><br /><i>10 -
+                    9000</i><br /><i>Reset to Apply</i></span>
+        </div>
+        <div class="tooltip">
+            <input type="number" id="rangeInput" placeholder="12-300" value="45" min="2" max="300">
+            <span class="tooltiptext"><b>Interaction Range</b><br /><i>The range in which particles push or pull on each
+                    other.</i><br /><i>12 - 300</i><br /><i>Reset & Randomize to Apply</i></span>
+        </div>
+        <div class="tooltip">
+            <input type="number" id="forceRangeInput" placeholder="Max Force" value="12" min="0.1" max="99" step="0.1">
+            <span class="tooltiptext"><b>Force Strength</b><br /><i>Possible range of random force
+                    strengths.</i><br /><i>0.1 - 99</i><br /><i>Reset & Randomize to Apply</i></span>
+        </div>
+        <div class="tooltip">
+            <input type="number" id="colorCountInput" placeholder="1-7" value="7" min="1" max="29">
+            <span class="tooltiptext"><b>Color Count</b><br /><i>Amount of different colors of particles.</i><br /><i>1
+                    - 30</i><br /><i>Reset to Apply</i></span>
+        </div>
+        <div class="tooltip">
+            <label class="container"><input type="checkbox" id="randomColorsCheckbox">
+                <div class="checkmark"></div>
+            </label>
+            <span class="tooltiptext"><b>Random Colors</b><br /><i>Starts with a random color each time.</i></span>
+        </div>
+
+        <div class="speedSettings">
+            <fieldset>
+                <p>Simulation Speed</p>
+                <div class="tooltip">
+                    <input class="radio1" type="radio" id="slowSpeed" name="speedButton" value="1" />
+                    <span class="tooltiptext">Slow</span>
+                </div>
+                <div class="tooltip">
+                    <input class="radio2" type="radio" id="mediumSpeed" name="speedButton" value="2" checked />
+                    <span class="tooltiptext">Medium<br /><i>Default</i></span>
+                </div>
+                <div class="tooltip">
+                    <input class="radio3" type="radio" id="fastSpeed" name="speedButton" value="3" />
+                    <span class="tooltiptext">Fast</span>
+                </div>
+            </fieldset>
+        </div>
+        <div class="sizeSettings">
+            <fieldset>
+                <p>Particle Size</p>
+                <div class="tooltip">
+                    <input class="radio1" type="radio" id="smallSize" name="sizeButton" value="1.25" />
+                    <span class="tooltiptext">Small</span>
+                </div>
+                <div class="tooltip">
+                    <input class="radio2" type="radio" id="mediumSize" name="sizeButton" value="1.75" checked />
+                    <span class="tooltiptext">Medium<br /><i>Default</i></span>
+                </div>
+                <div class="tooltip">
+                    <input class="radio3" type="radio" id="bigSize" name="sizeButton" value="2.25" />
+                    <span class="tooltiptext">Big</span>
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+    <div id="forceMatrix" class="hidden"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
