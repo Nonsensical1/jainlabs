@@ -107,9 +107,9 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
         if (dist > 0) {
           // Global gentle pull towards the cursor
           let force = 0.25;
-          // Stronger pull when within 400px
-          if (dist < 400) {
-            force = 1.2 * (1 - dist / 400) + 0.25;
+          // Stronger pull when within 200px
+          if (dist < 200) {
+            force = 1.2 * (1 - dist / 200) + 0.25;
           }
           this.ax += (dx / dist) * force;
           this.ay += (dy / dist) * force;

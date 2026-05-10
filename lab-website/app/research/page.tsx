@@ -1,5 +1,69 @@
 import LifeSimulation from "@/components/LifeSimulation"
 
+const researchAreas = [
+  {
+    number: 1,
+    title: "Discovery and Engineering of Novel CRISPR/Cas Systems",
+    description:
+      "We are interested in discovering and engineering novel CRISPR/Cas systems towards improving the repertoire for gene editing, gene correction, and diagnostics. Our lab is also investigating the mechanism of various Type II, V, and VI CRISPR systems.",
+    publications: [],
+  },
+  {
+    number: 2,
+    title: "Enhanced Sensitivity, Specificity, and Control of CRISPR/Cas Systems",
+    description:
+      "We focus on understanding the CRISPR/Cas mechanisms to engineer novel genome editing tools with improved activity, specificity, sensitivity, and function. To edit genes at precise location and time, we created a light-activatable CRISPR-PLUS (CRISPR-precise light-mediated unveiling of sgRNAs) system by incorporating a photocleavable complementary oligonucleotide to the guide RNA, which allowed precise control of genome editing with light. We also demonstrated precise control of CRISPR activity with multiple different sgRNAs concurrently using CRISPR-PLUS in vitro, enabling the multiplexing capabilities of CRISPR-PLUS. We recently discovered that CRISPR-PLUS demonstrates significant improvement in specificity of CRISPR, which is currently being investigated in our lab. In addition, we also discovered various modifications on crRNAs that can drastically enhance the sensitivity and specificity of CRISPR/Cas systems.",
+    publications: [
+      {
+        title: "Development of CRISPR as an Antiviral Strategy to Combat SARS-CoV-2 and Influenza",
+        authors: "Nguyen et al.",
+        journal: "Cell, 2020",
+        href: "https://www.cell.com/cell/fulltext/S0092-8674(20)30856-7",
+      },
+      {
+        title: "CRISPR-PLUS: Light-activated CRISPR for precise genome editing",
+        authors: "Jain et al.",
+        journal: "Angew. Chem., 2016",
+        href: "https://onlinelibrary.wiley.com/doi/full/10.1002/anie.201606123",
+      },
+      {
+        title: "Engineering of CRISPR-Cas12b for enhanced sensitivity and specificity",
+        authors: "Nguyen et al.",
+        journal: "Nature Communications, 2020",
+        href: "https://www.nature.com/articles/s41467-020-18615-1",
+      },
+    ],
+  },
+  {
+    number: 3,
+    title: "Targeted Delivery of CRISPR/Cas Systems with Improved Genomic Integration",
+    description:
+      "We are engineering both non-viral and viral vectors for delivery for efficient editing and genome integration. Recently we developed an efficient targeted delivery system in vitro and in vivo, using guiding peptide sequences (GPS) carrying a lipid tail, cell-penetrating domain, and a targeting domain. When mixed with CRISPR/Cas, we discovered that these peptide-lipids form nanocomplexes electrostatically (CRISPR-GPS) and can deliver the complexes to a variety of cell lines and can be potentially applied in vivo.",
+    publications: [
+      {
+        title: "Efficient Delivery of Genome-Editing Proteins using CRISPR-GPS",
+        authors: "Jain et al.",
+        journal: "Nanoscale, 2019",
+        href: "https://pubs.rsc.org/en/content/articlelanding/2019/nr/c9nr01786k",
+      },
+    ],
+  },
+  {
+    number: 4,
+    title: "CRISPR/Cas as Improved Diagnostics",
+    description:
+      "We recently discovered that modified crRNAs for LbCas12a systems can increase the speed of trans-cleavage by 3.2-fold, making it one of the fastest reported CRISPR/Cas in terms of trans-cleavage activity — we termed it CRISPR-ENHANCE. Using CRISPR-ENHANCE, we observed up to femtomolar sensitivity of nucleic acid detection without any target amplification. We applied the technology for improved detection of SARS-CoV-2 RNA using paper-based diagnostics as well as for detecting prostate cancer, HIV & HCV genes. We also discovered a significant improvement in specificity of detection by several-fold (up to 8.8-fold) with CRISPR-ENHANCE.",
+    publications: [
+      {
+        title: "CRISPR-ENHANCE: Rapid and enhanced detection of nucleic acids",
+        authors: "Nguyen et al.",
+        journal: "Nature Communications, 2020",
+        href: "https://www.nature.com/articles/s41467-020-18615-1",
+      },
+    ],
+  },
+]
+
 export default function ResearchPage() {
   return (
     <div className="relative min-h-screen overflow-hidden pt-24 pb-16">
@@ -10,106 +74,71 @@ export default function ResearchPage() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="bg-background/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-border/50">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            Publications
+          {/* Page Header */}
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            Research Overview
           </h1>
-          
-          <p className="mt-6 text-sm text-muted-foreground">
-            *Equal contribution
-          </p>
-          <p className="text-sm text-muted-foreground">
-            #Corresponding author
+          <p className="mt-6 text-lg text-foreground/80 leading-relaxed max-w-[900px]">
+            Our laboratory develops next-generation diagnostics and genome-editing technologies. We combine bioinformatics, protein and nucleic acid engineering, bioorganic chemistry, directed evolution, and machine learning to create cutting-edge tools for the targeted delivery, detection, and repair of DNA, RNA, and proteins.
           </p>
 
-          <div className="mt-8">
-            <a 
-              href="http://scholar.google.com/citations?user=qtpo58sAAAAJ&hl=en" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
-            >
-              [For a full list of publications on Google Scholar, click here]
-            </a>
-          </div>
+          {/* Divider */}
+          <hr className="my-12 border-border/40" />
 
-          <div className="mt-12 space-y-8">
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Huang B, Orosco C, Pizzano B, Rakestraw N</span>, <span className="font-medium">Jain PK#</span>. 
-              A CRISPR-based method to remove viruses from donor organs before transplant using a normothermic pump. 
-              <span className="italic"> Molecular Therapy</span>. 2024 Sep 21:S1525-0016(24)00609-0.
-            </p>
+          {/* Research Areas — continuous document flow */}
+          <div className="space-y-20">
+            {researchAreas.map((area) => (
+              <section key={area.number}>
+                {/* Numbered heading */}
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  <span className="text-muted-foreground mr-3">{area.number}.</span>
+                  {area.title}
+                </h2>
 
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Pizzano B*, Huang B*</span>, Reitsema C, Wang C, Lu Y, <span className="font-medium">Xie F, Orosco C, Rakestraw N, Jain PK#</span>. 
-              Design and engineering of an engineered, thermostable Cas12a. 
-              <span className="italic"> iScience</span>. 2024 Oct 18; 27(10):110825.
-            </p>
+                {/* Two-column: text + image placeholder */}
+                <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                  {/* Description */}
+                  <div className="lg:col-span-3">
+                    <p className="text-foreground/80 leading-relaxed">
+                      {area.description}
+                    </p>
+                  </div>
 
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Pizzano B, Xie F, Orosco C, Huang B, Rakestraw N, Jain PK#</span>. 
-              Evolution of the CRISPR-Cas System. 
-              <span className="italic"> Chemical Reviews</span>. 2024 Feb 28; 124(4):1588-1647.
-            </p>
+                  {/* Image placeholder */}
+                  <div className="lg:col-span-2">
+                    <div className="w-full aspect-[4/3] bg-muted/60 rounded-xl flex items-center justify-center">
+                      <span className="text-sm text-muted-foreground">Research figure</span>
+                    </div>
+                  </div>
+                </div>
 
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Pizzano B, Orosco C, Xie F, Huang B, Rakestraw N, Jain PK#</span>. 
-              Harnessing Cas9 for Nucleic Acid Detection. 
-              <span className="italic"> Trends in Biochemical Sciences</span>. 2023 Dec 11:S0968-0004(23)00273-0.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Orosco C*, Pizzano B*</span>, Wang C, <span className="font-medium">Jain PK#</span>. 
-              Engineered liposomes for in vivo delivery of CRISPR-Cas systems. 
-              <span className="italic"> Methods in Enzymology</span>. 2023; 681:365-388.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Pizzano B*, Orosco C*, Xie F*</span>, Huang B, <span className="font-medium">Rakestraw N, Jain PK#</span>. 
-              Engineered nanoparticles for the delivery of CRISPR-Cas systems. 
-              <span className="italic"> Methods in Enzymology</span>. 2023; 681:331-364.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              Saha S, Zhao E, <span className="font-medium">Jain PK#</span>. 
-              Targeted genome engineering for the management of infectious diseases. 
-              <span className="italic"> Trends in Molecular Medicine</span>. 2022 Dec; 28(12):1075-1087.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Saha S*, Zhao E*</span>, Li T, <span className="font-medium">Jain PK#</span>. 
-              A highly sensitive, one-pot, single-temperature CRISPR-Cas12a assay for clinical detection of HPV. 
-              <span className="italic"> Biosensors and Bioelectronics</span>. 2022 Dec 15; 218:114757.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              Dhanushkodi NR*, <span className="font-medium">Jain PK*</span>, Nanjundan N, et al. 
-              Light-controlled, specific, and reversible targeting of DNA by a CRISPR-Cas9 platform. 
-              <span className="italic"> Journal of the American Chemical Society</span>. 2021 May 12; 143(18):6860-6869.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Jain PK</span>, et al. 
-              Development of light-activated CRISPR using guide RNAs with photocleavable protectors. 
-              <span className="italic"> Angewandte Chemie International Edition</span>. 2020 Jan; 59(2):645-649.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Jain PK*#</span>, Lo JH, <span className="font-medium">Rananaware SR, Downing M, Panda A</span>, Tai M, Raghavan S, Fleming HE, Bhatia SN#. 
-              Non-viral delivery of CRISPR/Cas9 complex using CRISPR-GPS nanocomplexes. 
-              <span className="italic"> Nanoscale</span>. 2019 Oct 29.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Downing M</span>, <span className="font-medium">Jain PK#</span>. 
-              Chapter 16 – Mesoporous silica nanoparticles: synthesis, properties, and biomedical applications. 
-              <span className="italic"> Nanoparticles for Biomedical Applications</span>. 2019 Nov 29.
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              <span className="font-medium">Jain PK</span>, et al. 
-              The ULTIMATE Reagent: A Universal Photocleavable and Clickable Reagent for the Regiospecific and Reversible End Labeling of Any Nucleic Acid. 
-              <span className="italic"> ChemBioChem</span>. 2018 Dec.
-            </p>
+                {/* Key Publications */}
+                {area.publications.length > 0 && (
+                  <div className="mt-8">
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+                      Key Publications
+                    </h3>
+                    <ul className="space-y-3">
+                      {area.publications.map((pub, j) => (
+                        <li key={j} className="pl-4 border-l-2 border-border/40">
+                          <a
+                            href={pub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+                          >
+                            {pub.title}
+                          </a>
+                          <p className="text-xs text-muted-foreground mt-0.5">
+                            {pub.authors} — <em>{pub.journal}</em>
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </section>
+            ))}
           </div>
         </div>
       </div>

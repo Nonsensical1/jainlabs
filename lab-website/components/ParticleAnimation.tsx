@@ -253,7 +253,8 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       // Ensure we have coords
       if (dnaCoords.length === 0 || textCoords.length === 0) return;
 
-      const MAX_PARTICLES = 5500;
+      const isMobile = width < 768;
+      const MAX_PARTICLES = isMobile ? 2200 : 5500;
 
       // Randomly sample coordinates down to our maximum limit
       let finalDnaCoords = dnaCoords;

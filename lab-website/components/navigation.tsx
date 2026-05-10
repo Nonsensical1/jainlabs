@@ -11,8 +11,9 @@ const navItems = [
   { href: "/members", label: "Team" },
   {
     label: "Research",
+    href: "/research",
     dropdown: [
-      { href: "/research", label: "Publications" },
+      { href: "/publications", label: "Publications" },
       { href: "/grants", label: "Grants" },
       { href: "/patents", label: "Patents / Licenses" },
     ],
@@ -74,11 +75,11 @@ export function Navigation() {
                       closeTimeoutRef.current = setTimeout(() => setDropdownOpen(false), 300)
                     }}
                   >
-                    <button
-                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                    <Link
+                      href={item.href || "/research"}
                       className={cn(
                         "text-sm transition-colors flex items-center gap-1",
-                        isResearchActive(item)
+                        isResearchActive(item) || pathname === item.href
                           ? "text-foreground"
                           : "text-muted-foreground hover:text-foreground"
                       )}
@@ -92,7 +93,7 @@ export function Navigation() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </button>
+                    </Link>
 
                     {dropdownOpen && (
                       <ul className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
