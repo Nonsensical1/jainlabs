@@ -21,7 +21,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
 
     let width = container.clientWidth;
     let height = container.clientHeight;
-    
+
     // Support high DPI displays
     const dpr = window.devicePixelRatio || 1;
     canvas.width = width * dpr;
@@ -74,20 +74,22 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       y: number;
       vx: number;
       vy: number;
-      dnaTarget: { x: number; y: number };
+      dnaTarget3D: { x: number; y: number; z: number };
       textTarget: { x: number; y: number };
-      size: number;
+      baseSize: number;
+      currentSize: number;
       friction: number;
       ease: number;
 
-      constructor(x: number, y: number, dnaTarget: { x: number; y: number }, textTarget: { x: number; y: number }) {
+      constructor(x: number, y: number, dnaTarget3D: { x: number; y: number; z: number }, textTarget: { x: number; y: number }) {
         this.x = x;
         this.y = y;
         this.vx = 0;
         this.vy = 0;
-        this.dnaTarget = dnaTarget;
+        this.dnaTarget3D = dnaTarget3D;
         this.textTarget = textTarget;
-        this.size = Math.random() * 2.5 + 2; // slightly smaller circles
+        this.baseSize = Math.random() * 2.5 + 2;
+        this.currentSize = this.baseSize;
         this.friction = Math.random() * 0.04 + 0.88;
         this.ease = Math.random() * 0.05 + 0.05;
       }
@@ -96,20 +98,40 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         let targetX = this.x;
         let targetY = this.y;
 
-        if (phase === 0) {
-          targetX = this.dnaTarget.x;
-          targetY = this.dnaTarget.y;
-        } else if (phase === 1) {
-          targetX = this.dnaTarget.x + Math.sin(Date.now() * 0.002 + this.y) * 2;
-          targetY = this.dnaTarget.y + Math.cos(Date.now() * 0.002 + this.x) * 2;
+        if (phase === 0 || phase === 1) {
+          // Slow 3D Spin
+          const spinRate = 0.001;
+          const spinAngle = Date.now() * spinRate;
+          const y = this.dnaTarget3D.y;
+          const z = this.dnaTarget3D.z;
+
+          // 1. Rotate around the X-axis (spin)
+          const rotatedY = y * Math.cos(spinAngle) - z * Math.sin(spinAngle);
+          const rotatedZ = y * Math.sin(spinAngle) + z * Math.cos(spinAngle);
+
+          // Perspective projection
+          const focalLength = 1000;
+          const perspective = focalLength / (focalLength + rotatedZ);
+
+          targetX = width / 2 + this.dnaTarget3D.x * perspective;
+          targetY = height / 2 + rotatedY * perspective;
+
+          this.currentSize = Math.max(0.1, this.baseSize * perspective);
+
+          if (phase === 1) {
+            targetX += Math.sin(Date.now() * 0.002 + this.y) * 2;
+            targetY += Math.cos(Date.now() * 0.002 + this.x) * 2;
+          }
         } else if (phase === 2) {
-          // Free roam (handled by explosive velocity initially, then just friction)
+          // Free roam
         } else if (phase === 3) {
           targetX = this.textTarget.x;
           targetY = this.textTarget.y;
+          this.currentSize = this.baseSize;
         } else if (phase === 4) {
           targetX = this.textTarget.x + Math.sin(Date.now() * 0.001 + this.y) * 0.5;
           targetY = this.textTarget.y + Math.cos(Date.now() * 0.001 + this.x) * 0.5;
+          this.currentSize = this.baseSize;
         }
 
         if (phase !== 2) {
@@ -117,12 +139,12 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
           const dxMouse = mouse.x - this.x;
           const dyMouse = mouse.y - this.y;
           const distanceMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-          
-          if (distanceMouse < 80) {
-            const force = (80 - distanceMouse) / 80;
-            const angle = Math.atan2(dyMouse, dxMouse);
-            targetX -= Math.cos(angle) * force * 100;
-            targetY -= Math.sin(angle) * force * 100;
+
+          if (distanceMouse < 120) {
+            const force = (120 - distanceMouse) / 120;
+            const mouseAngle = Math.atan2(dyMouse, dxMouse);
+            targetX -= Math.cos(mouseAngle) * force * 125;
+            targetY -= Math.sin(mouseAngle) * force * 125;
           }
 
           const dx = targetX - this.x;
@@ -139,7 +161,51 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       }
     }
 
-    const getDNAPixels = () => {
+    const getDNA3DCoords = () => {
+      const coords = [];
+      const amplitude = Math.min(height * 0.3, 350); // Slightly reduced to fit 3D tilt
+      const frequency = 0.012; // Adjusted frequency
+      const strandWidth = Math.min(width * 0.95, 1400);
+      const startX = -strandWidth / 2;
+      const endX = strandWidth / 2;
+
+      const phaseOffset = Math.PI; // Perfect 180 degree double helix
+
+      // Use x += 1 for solid rails (leaves enough particle budget for rungs)
+      for (let x = startX; x <= endX; x += 1) {
+        const t = x * frequency;
+
+        // Strand 1 (Rail 1)
+        coords.push({
+          x: x,
+          y: Math.sin(t) * amplitude,
+          z: Math.cos(t) * amplitude
+        });
+
+        // Strand 2 (Rail 2)
+        coords.push({
+          x: x,
+          y: Math.sin(t + phaseOffset) * amplitude,
+          z: Math.cos(t + phaseOffset) * amplitude
+        });
+
+        // Rungs connecting the strands
+        // Draw rungs every 25 units so they are distinct but frequent
+        if (Math.round(x) % 25 === 0) {
+          // Moderately dense points for the rungs (~20 points per rung)
+          for (let r = 0.05; r < 1; r += 0.05) {
+            coords.push({
+              x: x,
+              y: Math.sin(t) * amplitude * (1 - r) + Math.sin(t + phaseOffset) * amplitude * r,
+              z: Math.cos(t) * amplitude * (1 - r) + Math.cos(t + phaseOffset) * amplitude * r
+            });
+          }
+        }
+      }
+      return coords;
+    };
+
+    const getTextPixels = () => {
       const offscreen = document.createElement('canvas');
       offscreen.width = width;
       offscreen.height = height;
@@ -147,32 +213,20 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       if (!oCtx) return [];
 
       oCtx.clearRect(0, 0, width, height);
-      oCtx.lineWidth = 4;
-      oCtx.strokeStyle = 'black';
-      oCtx.lineCap = 'round';
 
-      const amplitude = Math.min(height * 0.35, 450); // Fills up to 70% of screen height
-      const frequency = 0.012; // Adjusted frequency to maintain a nice twist ratio at the new height
-      const centerY = height / 2;
-      const strandWidth = Math.min(width * 0.95, 1400);
-      const startX = width / 2 - strandWidth / 2;
-      const endX = width / 2 + strandWidth / 2;
+      // Responsive font size
+      let fontSize = Math.min(width * 0.25, 360);
+      if (width < 1024) fontSize = 200;
+      if (width < 768) fontSize = 140;
+      if (width < 480) fontSize = 80;
 
-      for (let x = startX; x <= endX; x += 1) {
-        const y1 = centerY + Math.sin(x * frequency) * amplitude;
-        const y2 = centerY + Math.sin(x * frequency + Math.PI) * amplitude;
+      oCtx.font = `bold ${fontSize}px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+      oCtx.fillStyle = 'black';
+      oCtx.textAlign = 'center';
+      oCtx.textBaseline = 'middle';
 
-        oCtx.fillStyle = 'black';
-        oCtx.fillRect(x, y1, 4, 4);
-        oCtx.fillRect(x, y2, 4, 4);
-
-        if (Math.round(x) % 20 === 0) {
-          oCtx.beginPath();
-          oCtx.moveTo(x, y1);
-          oCtx.lineTo(x, y2);
-          oCtx.stroke();
-        }
-      }
+      // We want to align center
+      oCtx.fillText('Jain Lab', width / 2, height / 2);
 
       const imageData = oCtx.getImageData(0, 0, width, height);
       const pixels = imageData.data;
@@ -189,60 +243,22 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       return coords;
     };
 
-    const getTextPixels = () => {
-      const offscreen = document.createElement('canvas');
-      offscreen.width = width;
-      offscreen.height = height;
-      const oCtx = offscreen.getContext('2d', { willReadFrequently: true });
-      if (!oCtx) return [];
-
-      oCtx.clearRect(0, 0, width, height);
-      
-      // Responsive font size
-      let fontSize = Math.min(width * 0.25, 360);
-      if (width < 1024) fontSize = 200;
-      if (width < 768) fontSize = 140;
-      if (width < 480) fontSize = 80;
-      
-      oCtx.font = `bold ${fontSize}px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-      oCtx.fillStyle = 'black';
-      oCtx.textAlign = 'center';
-      oCtx.textBaseline = 'middle';
-      
-      // We want to align center
-      oCtx.fillText('Jain Lab', width / 2, height / 2);
-
-      const imageData = oCtx.getImageData(0, 0, width, height);
-      const pixels = imageData.data;
-      const coords = [];
-
-      for (let y = 0; y < height; y += 2) { 
-        for (let x = 0; x < width; x += 2) {
-          const index = (y * width + x) * 4;
-          if (pixels[index + 3] > 128) {
-            coords.push({ x, y });
-          }
-        }
-      }
-      return coords;
-    };
-
     const initParticles = () => {
       phase = 0;
       phaseTimer = 0;
-      
-      const dnaCoords = getDNAPixels();
+
+      const dnaCoords = getDNA3DCoords();
       const textCoords = getTextPixels();
 
       // Ensure we have coords
       if (dnaCoords.length === 0 || textCoords.length === 0) return;
 
       const MAX_PARTICLES = 5500;
-      
+
       // Randomly sample coordinates down to our maximum limit
       let finalDnaCoords = dnaCoords;
       let finalTextCoords = textCoords;
-      
+
       if (dnaCoords.length > MAX_PARTICLES) {
         finalDnaCoords = [];
         const step = dnaCoords.length / MAX_PARTICLES;
@@ -250,7 +266,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
           finalDnaCoords.push(dnaCoords[Math.floor(i * step)]);
         }
       }
-      
+
       if (textCoords.length > MAX_PARTICLES) {
         finalTextCoords = [];
         const step = textCoords.length / MAX_PARTICLES;
@@ -266,10 +282,10 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         const startX = Math.random() * width;
         const startY = Math.random() * height;
 
-        const dnaTarget = finalDnaCoords[i % finalDnaCoords.length];
+        const dnaTarget3D = finalDnaCoords[i % finalDnaCoords.length];
         const textTarget = finalTextCoords[i % finalTextCoords.length];
 
-        particles.push(new Particle(startX, startY, dnaTarget, textTarget));
+        particles.push(new Particle(startX, startY, dnaTarget3D, textTarget));
       }
     };
 
@@ -281,33 +297,33 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
 
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
-      
+
       phaseTimer++;
 
-      if (phase === 0 && phaseTimer > 100) {
+      if (phase === 0 && phaseTimer > 50) {
         // Hold DNA
         phase = 1;
         phaseTimer = 0;
-      } else if (phase === 1 && phaseTimer > 60) {
+      } else if (phase === 1 && phaseTimer > 30) {
         // Disperse
         phase = 2;
         phaseTimer = 0;
-        
+
         particles.forEach(p => {
           const angle = Math.random() * Math.PI * 2;
           const speed = Math.random() * 15 + 5;
           p.vx = Math.cos(angle) * speed;
           p.vy = Math.sin(angle) * speed;
         });
-      } else if (phase === 2 && phaseTimer > 50) {
+      } else if (phase === 2 && phaseTimer > 25) {
         // Gather to text
         phase = 3;
         phaseTimer = 0;
-      } else if (phase === 3 && phaseTimer > 100) {
+      } else if (phase === 3 && phaseTimer > 50) {
         // Hold text
         phase = 4;
         phaseTimer = 0;
-      } else if (phase === 4 && phaseTimer > 50) {
+      } else if (phase === 4 && phaseTimer > 25) {
         if (onComplete) {
           onComplete();
           phaseTimer = -99999; // prevent multiple calls
@@ -315,15 +331,15 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       }
 
       // Batch rendering using circles
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.9)';
       ctx.beginPath();
-      
+
       particles.forEach(p => {
         p.update();
-        ctx.moveTo(p.x + p.size, p.y); // move to edge of circle to prevent connecting lines
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.moveTo(p.x + p.currentSize, p.y);
+        ctx.arc(p.x, p.y, p.currentSize, 0, Math.PI * 2);
       });
-      
+
       ctx.fill();
 
       animationFrameId = requestAnimationFrame(animate);

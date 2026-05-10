@@ -8,12 +8,16 @@ const allColors = [
   'green', 'blue', 'cyan', 'magenta', 'pink', 'gold', 'teal', 'coral'
 ];
 
+// Reference density: home page uses ~1000 particles in a 1920×500 area
+const REFERENCE_DENSITY = 1000 / (1920 * 500); // particles per px²
+
 interface LifeSimulationProps {
   className?: string;
-  particleCount?: number;
+  particleCount?: number; // if provided, overrides dynamic calculation
+  edgeBias?: boolean; // if true, 70% of particles spawn in the outer margins
 }
 
-export default function LifeSimulation({ className, particleCount = 800 }: LifeSimulationProps) {
+export default function LifeSimulation({ className, particleCount, edgeBias = false }: LifeSimulationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -102,10 +106,10 @@ export default function LifeSimulation({ className, particleCount = 800 }: LifeS
         
         if (dist > 0) {
           // Global gentle pull towards the cursor
-          let force = 0.15;
-          // Stronger pull when within 300px
-          if (dist < 300) {
-            force = 0.5 * (1 - dist / 300) + 0.15;
+          let force = 0.25;
+          // Stronger pull when within 400px
+          if (dist < 400) {
+            force = 1.2 * (1 - dist / 400) + 0.25;
           }
           this.ax += (dx / dist) * force;
           this.ay += (dy / dist) * force;
@@ -272,6 +276,12 @@ export default function LifeSimulation({ className, particleCount = 800 }: LifeS
     }
 
     function initParticles() {
+      // Calculate particle count from canvas area to match home page density
+      const area = canvas.width * canvas.height;
+      const count = particleCount ?? Math.round(area * REFERENCE_DENSITY);
+      // Clamp to a reasonable range for performance
+      const finalCount = Math.max(200, Math.min(count, 3000));
+
       const colorCount = 7;
       const startIndex = Math.floor(Math.random() * allColors.length);
       colors = allColors.slice(startIndex, startIndex + colorCount);
@@ -280,13 +290,29 @@ export default function LifeSimulation({ className, particleCount = 800 }: LifeS
       }
 
       particles = [];
-      const particlesPerColor = Math.floor(particleCount / colors.length);
+      const particlesPerColor = Math.floor(finalCount / colors.length);
 
       for (let i = 0; i < colors.length; i++) {
         const color = colors[i];
         for (let j = 0; j < particlesPerColor; j++) {
-          const x = Math.random() * canvas.width;
+          let x: number;
           const y = Math.random() * canvas.height;
+
+          if (edgeBias && Math.random() < 0.7) {
+            // 70% of particles spawn in the outer margins
+            // The content card is max-w-[1200px] centered with ~32px padding
+            const cardWidth = Math.min(1200, canvas.width * 0.85);
+            const marginLeft = (canvas.width - cardWidth) / 2;
+            // Spawn in left or right margin
+            if (Math.random() < 0.5) {
+              x = Math.random() * marginLeft; // left margin
+            } else {
+              x = canvas.width - Math.random() * marginLeft; // right margin
+            }
+          } else {
+            x = Math.random() * canvas.width;
+          }
+
           particles.push(new Particle(x, y, color, interactionRanges[color] || interactionRange, (interactionRanges[color] || interactionRange) ** 2));
         }
       }

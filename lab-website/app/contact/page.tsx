@@ -1,7 +1,15 @@
+import LifeSimulation from "@/components/LifeSimulation"
+
 export default function ContactPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="relative min-h-screen overflow-hidden pt-24 pb-16">
+      {/* Background Life Particles */}
+      <div className="absolute inset-0 z-0 opacity-80">
+        <LifeSimulation edgeBias />
+      </div>
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+        <div className="bg-background/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-border/50">
         <h1 className="text-4xl md:text-5xl font-bold text-foreground">
           Contact
         </h1>
@@ -80,6 +88,7 @@ export default function ContactPage() {
             </li>
           </ul>
         </section>
+        </div>
       </div>
     </div>
   )

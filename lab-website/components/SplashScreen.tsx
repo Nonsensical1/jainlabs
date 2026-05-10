@@ -8,9 +8,14 @@ let splashHasPlayed = false;
 export default function SplashScreen({ children }: { children: React.ReactNode }) {
   const [isAnimating, setIsAnimating] = useState(!splashHasPlayed);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    if (splashHasPlayed) return;
+    if (splashHasPlayed) {
+      // If returning to home page via client navigation, trigger the bottom-up animation instantly
+      const timer = setTimeout(() => setContentVisible(true), 50);
+      return () => clearTimeout(timer);
+    }
 
     // Prevent scrolling while the splash screen is active
     if (isAnimating) {
@@ -26,6 +31,7 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
   const handleComplete = () => {
     splashHasPlayed = true;
     setIsFadingOut(true);
+    setContentVisible(true);
     // Wait for the fade transition to complete before unmounting
     setTimeout(() => {
       setIsAnimating(false);
@@ -37,12 +43,12 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
       {/* Full Page Splash Screen Overlay */}
       {isAnimating && (
         <div 
-          className={`fixed inset-0 z-[100] bg-black transition-opacity duration-1000 flex items-center justify-center ${
+          className={`fixed inset-0 z-[100] bg-white/60 backdrop-blur-sm transition-opacity duration-1000 flex items-center justify-center ${
             isFadingOut ? 'opacity-0' : 'opacity-100'
           }`}
         >
           {/* Layer 1: Main DNA / Text Animation */}
-          <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6 pointer-events-none">
+          <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6">
             <ParticleAnimation onComplete={handleComplete} className="h-full" />
           </div>
         </div>
@@ -51,8 +57,8 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
       {/* Main Content (loads bottom-up) */}
       <div 
         className={`transition-all duration-1000 ease-out transform min-h-screen ${
-          isAnimating && !isFadingOut 
-            ? 'translate-y-[10vh] opacity-0 overflow-hidden h-screen' 
+          !contentVisible 
+            ? 'translate-y-12 opacity-0 overflow-hidden h-screen' 
             : 'translate-y-0 opacity-100 h-auto'
         }`}
       >

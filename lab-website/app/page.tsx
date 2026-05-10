@@ -25,7 +25,7 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
               NanoBiomolecular Precision Lab
             </h1>
-            <p className="text-lg md:text-xl text-zinc-200 leading-relaxed max-w-3xl font-light">
+            <p className="text-lg md:text-xl text-zinc-200 leading-relaxed font-light">
               Pioneering the discovery and engineering of advanced biomolecular systems to enhance the precision and delivery of programmable genome-editing tools, such as CRISPR/Cas systems.
             </p>
             
@@ -49,7 +49,7 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-[1200px] mx-auto text-center bg-background/80 backdrop-blur-sm p-8 rounded-2xl border border-border/50">
             <h2 className="text-3xl font-bold text-foreground mb-6">Advancing Precision Medicine</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground mx-auto">
               Combining bioinformatics, protein and nucleic acid engineering, bioorganic chemistry, directed evolution, and machine learning, Jain Lab develops cutting-edge technologies for the targeted delivery, detection, and repair of DNA, RNA, and proteins in specific tissues. The lab’s innovative research aims to revolutionize diagnosing and treating infectious diseases, genetic disorders, and cancer.
             </p>
           </div>
