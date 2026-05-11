@@ -325,7 +325,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         // Hold text
         phase = 4;
         phaseTimer = 0;
-      } else if (phase === 4 && phaseTimer > 30) {
+      } else if (phase === 4 && phaseTimer > 15) {
         if (onComplete) {
           onComplete();
           phaseTimer = -99999; // prevent multiple calls
