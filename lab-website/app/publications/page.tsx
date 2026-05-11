@@ -37,6 +37,18 @@ export default function ResearchPage() {
 
           <div className="mt-12 space-y-8">
             <p className="text-foreground leading-relaxed">
+              Ocampo RF, Orosco C, Huang B, West MS, Jain PK, <span className="font-medium">Taylor DW</span> Architecture of a DNA-guided Cas12a. <span className="italic">bioRxiv</span>, 2026. [View]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Peggs CMD, Rakestraw N, <span className="font-medium">Jain P</span> Utilizing CRISPR/Cas9 Gene Editing Techniques for Knockout of Genes in Escherichia coli Bacteria. <span className="italic">UF Journal of Undergraduate Research</span>, 2025. [View]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Anamisis K, Beerensson K, Rakestraw N, <span className="font-medium">Jain P</span> CRISPR-Mediated Gene Editing Tool Development for Patients with Usher Syndrome Type II. <span className="italic">UF Journal of Undergraduate Research</span>, 2024. [View]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
               Rananaware SR, Shoemaker GM, Pizzano BLM, Vesco EK, Sandoval LSW, Lewis JG, Bodin AP, Flannery SJ, Lange IH, Pedada D, Fang A, Antal SG, Aguilar D, Rakestraw NR, Karalkar VN, Meister KS, Nguyen LT, and <span className="font-medium">Jain PK*</span> AsCas12a tolerates insertions in target DNA. <span className="italic">Nucleic Acids Res.</span> 2025 Sep 23;53(17). [View] [*Corresponding author]
             </p>
 
@@ -49,11 +61,11 @@ export default function ResearchPage() {
             </p>
 
             <p className="text-foreground leading-relaxed">
-              Jia Y, Horvath K, Rananaware SR, Jain PK, and Sampath J Exploring the thermostability of CRISPR–Cas12b using molecular dynamics simulations. <span className="italic">arXiv.</span> 2024 Aug 20:2408.11149v1. [View]
+              Jia Y, Horvath K, Rananaware SR, Jain PK, and Sampath J Exploring the thermostability of CRISPR–Cas12b using molecular dynamics simulations. <span className="italic">Molecular Systems Design &amp; Engineering</span>, 2026. [View]
             </p>
 
             <p className="text-foreground leading-relaxed">
-              Nguyen LT<sup>§</sup>, Rakestraw NR<sup>§</sup>, Pizzano BL, Young CB, Huang Y, Beerensson KT, Fang A, Antal SG, Anamiss KV, Peggs CM, Yan J, Jing Y, Burdine RD, Adamson B, Toettcher JE, <span className="font-medium">Myhrvold C*</span>, and <span className="font-medium">Jain PK*</span> Efficient Genome Editing with Chimeric Oligonucleotide-Directed Editing. <span className="italic">bioRxiv.</span> 2024 Jul 10:2024-07. [View] [§Equal contributions][*Corresponding authors]
+              Nguyen LT<sup>§</sup>, Rakestraw NR<sup>§</sup>, Pizzano BL, Young CB, Huang Y, Beerensson KT, Fang A, Antal SG, Anamiss KV, Peggs CM, Yan J, Jing Y, Burdine RD, Adamson B, Toettcher JE, <span className="font-medium">Myhrvold C*</span>, and <span className="font-medium">Jain PK*</span> Efficient Genome Editing with Chimeric Oligonucleotide-Directed Editing. <span className="italic">Nature Communications</span>, 2026. [View] [§Equal contributions][*Corresponding authors]
             </p>
 
             <p className="text-foreground leading-relaxed">
