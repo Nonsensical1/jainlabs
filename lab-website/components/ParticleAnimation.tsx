@@ -88,7 +88,8 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         this.vy = 0;
         this.dnaTarget3D = dnaTarget3D;
         this.textTarget = textTarget;
-        this.baseSize = Math.random() * 2.5 + 2;
+        const isMobileSize = width < 768;
+        this.baseSize = isMobileSize ? Math.random() * 1.5 + 1 : Math.random() * 2.5 + 2;
         this.currentSize = this.baseSize;
         this.friction = Math.random() * 0.04 + 0.88;
         this.ease = Math.random() * 0.05 + 0.05;
@@ -254,7 +255,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       if (dnaCoords.length === 0 || textCoords.length === 0) return;
 
       const isMobile = width < 768;
-      const MAX_PARTICLES = isMobile ? 2200 : 5500;
+      const MAX_PARTICLES = isMobile ? 1500 : 5500;
 
       // Randomly sample coordinates down to our maximum limit
       let finalDnaCoords = dnaCoords;
