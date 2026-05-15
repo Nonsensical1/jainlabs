@@ -1,3 +1,4 @@
+import Image from "next/image"
 import LifeSimulation from "@/components/LifeSimulation"
 
 export default function MembersPage() {
@@ -26,7 +27,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">Postdocs</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Boyu.png" alt="Boyu Huang" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Boyu Huang, PhD</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Wuhan University (Biology)</p>
@@ -43,7 +46,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">PhD Students</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Noah.jpeg" alt="Noah Rakestraw" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Noah Rakestraw</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS (Summa Cum Laude): Occidental College (Biochemistry)</p>
@@ -55,7 +60,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Carlos1.png" alt="Carlos Orosco" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Carlos Orosco</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Georgia Institute of Technology (Chemical Engineering)</p>
@@ -66,7 +73,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Briana.jpeg" alt="Briana Pizzano" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Briana Pizzano</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Biological Engineering)</p>
@@ -77,7 +86,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Daisy.jpeg" alt="Daisy Aguilar Aguilar" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Daisy Aguilar Aguilar</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: North Carolina State University (Chemical Engineering)</p>
@@ -88,7 +99,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Dhruv.jpeg" alt="Dhruv Champaneri" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Dhruv Champaneri</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Rutgers University (Biotechnology)</p>
@@ -99,7 +112,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Dheeraj.jpg" alt="Dheeraj Pedada" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Dheeraj Pedada</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BE: University of Delaware (Chemical Engineering)</p>
@@ -115,7 +130,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">Research Assistants</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Dipan.jpg" alt="Dipan Das" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Dipan Das</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Presidency University, India (Chemistry)</p>
@@ -127,7 +144,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Aaryan.jpg" alt="Aaryan Pasupuleti" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Aaryan Pasupuleti</h3>
                 <p className="text-sm font-medium text-foreground mt-1">MS: University of Florida (Computer Science)</p>
@@ -143,7 +162,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">Masters Students</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Victor.jpeg" alt="Victor Vargas" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Victor Vargas</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -155,7 +176,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/August.jpeg" alt="August Bodin" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">August Bodin</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -172,7 +195,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">Undergraduate Researchers</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Jordan.jpeg" alt="Jordan Lewis" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Jordan Lewis</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Honors and University Research Scholar</p>
@@ -184,7 +209,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Ian.png" alt="Ian Lange" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Ian Lange</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -195,7 +222,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Coleen.jpg" alt="Coleen Peggs" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Coleen Peggs</h3>
                 <p className="text-sm font-medium text-foreground mt-1">University Research Scholar</p>
@@ -207,7 +236,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Kate.jpeg" alt="Kate Beerensson" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Kate Beerensson</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Biomedical Engineering</p>
@@ -218,7 +249,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Sydney.jpeg" alt="Sydney Antal" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Sydney Antal</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -229,7 +262,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Anne.jpg" alt="Anne Fang" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Anne Fang</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Biochemistry</p>
@@ -240,7 +275,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Suraj.jpeg" alt="Suraj Raghunathan" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Suraj Raghunathan</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Biochemistry</p>
@@ -251,7 +288,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Yasmin.jpeg" alt="Yasmin Elhabashy" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Yasmin Elhabashy</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -262,7 +301,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Nayan.jpeg" alt="Nayan Shah" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Nayan Shah</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Microbiology and Cell Science</p>
@@ -273,7 +314,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Lina.jpg" alt="Lina Mourad" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Lina Mourad</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -284,7 +327,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Divya.png" alt="Divya Adabala" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Divya Adabala</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -295,7 +340,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Kayli.jpg" alt="Kayli Zimmerman" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Kayli Zimmerman</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -306,7 +353,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Shruti.jpeg" alt="Shruti Sreekanth" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Shruti Sreekanth</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Health Science</p>
@@ -317,7 +366,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/mahi1.jpg" alt="Mahika Balaraju" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Mahika Balaraju</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Microbiology and Cell Sciences</p>
@@ -328,7 +379,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Ivy.jpeg" alt="Ivy Browning" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Ivy Browning</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -344,7 +397,9 @@ export default function MembersPage() {
           <h2 className="text-2xl font-semibold text-foreground border-b border-border pb-2">Lab Alumni</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Santosh.jpeg" alt="Santosh Rananaware" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Santosh Rananaware</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS | MSc (Honors): Birla Institute of Technology- Goa, India (Chemical Engineering | Physics)</p>
@@ -369,7 +424,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Mike.png" alt="Mike Hanna" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Mike Hanna, PhD</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Biochemistry)</p>
@@ -381,7 +438,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Minji.jpg" alt="Minji Chang" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Minji Chang</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Illinois- Urbana Champaign (Chemical Engineering)</p>
@@ -393,7 +452,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Raymond.jpeg" alt="Raymond Cole Hautamaki" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Raymond Cole Hautamaki | MS</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS | MS: University of Florida (Microbiology and Cell Science)</p>
@@ -405,7 +466,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Reza.png" alt="Reza Ahamadimashhadi" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Reza Ahamadimashhadi</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Imam Reza International University (Biomedical Engineering)</p>
@@ -418,7 +481,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Zoe.jpeg" alt="Zoe Fang" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Zoe Fang | BS</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Microbiology)</p>
@@ -429,7 +494,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Grace.jpeg" alt="Grace Shoemaker" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Grace Shoemaker | BS</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -442,7 +509,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/dylan.jpeg" alt="Dylan Carman" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Dylan Carman | BS</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -455,7 +524,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Nicolas.png" alt="Nicolas Macaluso" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Nicolas Macaluso | MS Thesis</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS | MS: University of Florida (Chemical Engineering)</p>
@@ -468,7 +539,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Emma.jpeg" alt="Emma Vesco" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Emma Vesco | BS</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: University of Florida (Chemical Engineering)</p>
@@ -481,7 +554,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Ayushma.jpeg" alt="Ayushma Joshi" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Ayushma Joshi</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BTech: Vellore Institute of Technology, India (Biological Engineering)</p>
@@ -492,7 +567,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Katelyn.jpeg" alt="Katelyn Meister" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Katelyn Meister</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -514,7 +591,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Katerina.jpeg" alt="Katerina Anamisis" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Katerina Anamisis</h3>
                 <p className="text-sm font-medium text-foreground mt-1">University Research Scholar</p>
@@ -526,7 +605,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Sarah.jpeg" alt="Sarah Flannery" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Sarah Flannery</h3>
                 <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
@@ -548,7 +629,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Lilia.jpeg" alt="Lilia Yang" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Lilia Yang</h3>
                 <p className="text-sm font-medium text-foreground mt-1">BS: Prairie View A&M University (Chemical Engineering)</p>
@@ -570,7 +653,9 @@ export default function MembersPage() {
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+              <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                <Image src="/Member-headshots/Sucheta.png" alt="Sucheta Karmakar" fill className="object-cover" />
+              </div>
               <div>
                 <h3 className="text-xl font-medium text-foreground">Sucheta Karmakar</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
