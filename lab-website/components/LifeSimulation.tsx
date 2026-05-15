@@ -280,7 +280,9 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       const area = canvas.width * canvas.height;
       const count = particleCount ?? Math.round(area * REFERENCE_DENSITY);
       // Clamp to a reasonable range for performance
-      const finalCount = Math.max(200, Math.min(count, 3000));
+      const isMobile = canvas.width < 768;
+      const maxCount = isMobile ? 600 : 3000;
+      const finalCount = Math.max(200, Math.min(count, maxCount));
 
       const colorCount = 7;
       const startIndex = Math.floor(Math.random() * allColors.length);
@@ -350,13 +352,23 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       particles.forEach(p => p.applyForces(particles, grid));
       particles.forEach(p => p.handleCollisions(particles, grid));
       
+      // Batch render particles by color for much better performance
+      const byColor: Record<string, Particle[]> = {};
       particles.forEach(p => {
         p.update();
-        ctx!.beginPath();
-        ctx!.arc(p.x, p.y, particleRadius, 0, Math.PI * 2);
-        ctx!.fillStyle = p.color;
-        ctx!.fill();
+        if (!byColor[p.color]) byColor[p.color] = [];
+        byColor[p.color].push(p);
       });
+
+      for (const color in byColor) {
+        ctx!.fillStyle = color;
+        ctx!.beginPath();
+        byColor[color].forEach(p => {
+          ctx!.moveTo(p.x + particleRadius, p.y);
+          ctx!.arc(p.x, p.y, particleRadius, 0, Math.PI * 2);
+        });
+        ctx!.fill();
+      }
 
       animationFrameId = requestAnimationFrame(animate);
     }

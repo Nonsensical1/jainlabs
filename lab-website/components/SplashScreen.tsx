@@ -48,7 +48,7 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
           }`}
         >
           {/* Layer 1: Main DNA / Text Animation */}
-          <div className="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6">
+          <div className="relative z-10 w-full h-full">
             <ParticleAnimation onComplete={handleComplete} className="h-full" />
           </div>
         </div>

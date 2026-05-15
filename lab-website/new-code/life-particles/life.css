@@ -1,0 +1,585 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+canvas {
+    border: 1px solid #fff;
+    width: 95vw;
+    height: 95vh;
+}
+
+#settingsButton {
+    position: absolute;
+    top: 2.6vh;
+    left: 2.6vw;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.controls {
+  position: absolute;
+  top: 2.6vh;
+  left: 2.6vw;
+  margin-top: 45px;
+  display: flex;
+  transition: opacity 0.3s ease-in-out;
+  align-items: center;
+  width: 185px;
+  flex-flow: row wrap;
+}
+.controls.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+button {
+  margin: 5px auto 0px auto;
+  padding: 5px 5px;
+  font-size: 13px;
+  border: 3px solid rgba(103,150,213,0.8);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  width: 45%;
+}
+
+#resetButton {
+  width: 95%;
+}
+
+#pauseResumeButton {
+  width: 95%;
+}
+
+input[type="number"] {
+    margin: 5px 5px 0px 5px;
+    padding: 0px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    height: 35px;
+    width: 67px;
+    text-align: center;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+#particleInput {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+      linear-gradient(135deg, rgba(20,104,255,0.8) 0%, rgba(161,248,255,0.8) 58%, rgba(161,255,208,0.8) 100%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+#colorCountInput {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+      linear-gradient(
+        135deg,
+        rgba(255, 0, 0, 0.8) 0%,
+        rgba(255, 154, 0, 0.8) 11.11%,
+        rgba(208, 222, 33, 0.8) 22.22%,
+        rgba(79, 220, 74, 0.8) 33.33%,
+        rgba(63, 218, 216, 0.8) 44.44%,
+        rgba(47, 201, 226, 0.8) 55.56%,
+        rgba(28, 127, 238, 0.8) 66.67%,
+        rgba(95, 21, 242, 0.8) 77.78%,
+        rgba(186, 12, 248, 0.8) 88.89%,
+        rgba(251, 7, 217, 0.8) 100%
+        ); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+#rangeInput {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+      linear-gradient(135deg, rgba(128,0,232,0.8) 0%, rgba(183,0,238,0.8) 28%, rgba(242,0,212,0.8) 45%, rgba(202,0,246,0.8) 66%, rgba(188,0,247,0.8) 81%, rgba(135,0,218,0.8) 90%, rgba(20,0,156,0.8) 100%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+#forceRangeInput {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+      linear-gradient(135deg, rgba(255,0,0,0.8) 0%, rgba(255,167,3,0.8) 28%, rgba(255,231,6,0.8) 52%, rgba(255,72,12,0.8) 100%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+#intervalInput {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+      linear-gradient(135deg, rgba(18,179,25,0.8) 0%, rgba(69,196,4,0.8) 28%, rgba(14,255,176,0.8) 49%, rgba(61,184,4,0.8) 76%, rgba(62,207,7,0.8) 89%, rgba(12,255,183,0.8) 100%); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Position the tooltip above the input */
+    left: 50%;
+    margin-left: -70px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: serif;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#forceMatrix {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border-radius: 10px;
+    padding: 10px; /* Reduced padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    max-width: calc(100vw - 120px); /* 50px buffer from both sides */
+    max-height: calc(100vh - 140px); /* 50px buffer from top and bottom */
+    overflow: auto; /* Enable scrolling if content overflows */
+    font-size: 12px; /* Smaller text size */
+}
+
+#forceMatrix.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#forceMatrix table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout: fixed;
+    overflow: auto;
+}
+
+#forceMatrix table, #forceMatrix th, #forceMatrix td {
+    border: 1px solid black;
+}
+
+#forceMatrix th, #forceMatrix td {
+    padding: 4px; /* Smaller padding */
+    text-align: center;
+    font-size: 12px; /* Smaller text size */
+}
+
+#forceMatrix th {
+    background-color: #f2f2f2;
+}
+
+#forceMatrix td {
+    padding: 0px; /* Smaller padding */
+}
+
+#forceMatrix input[type="number"] {
+    background-color: transparent; /* Matches the cell color */
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 4px 4px;
+    border-radius: 0px;
+}
+
+#forceMatrix input[type="number"]:focus {
+    outline: none; /* Remove outline for cleaner look */
+    background-color: rgba(255, 255, 255, 0.8); /* Slight background to indicate focus */
+}
+
+/* I got the following styles from a website */
+/* Hide the default checkbox */
+.container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+}
+.container {
+ display: block;
+ position: relative;
+ cursor: pointer;
+ font-size: 20px;
+ user-select: none;
+ margin-left: 5px;  
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.7em;
+    width: 3.8em;
+    margin-top: 5px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(96, 96, 98, 0.8), rgba(96, 96, 98, 0.8)), 
+      linear-gradient(
+        135deg,
+        rgba(255, 0, 0, 0.8) 0%,
+        rgba(255, 154, 0, 0.8) 11.11%,
+        rgba(208, 222, 33, 0.8) 22.22%,
+        rgba(79, 220, 74, 0.8) 33.33%,
+        rgba(63, 218, 216, 0.8) 44.44%,
+        rgba(47, 201, 226, 0.8) 55.56%,
+        rgba(28, 127, 238, 0.8) 66.67%,
+        rgba(95, 21, 242, 0.85) 77.78%,
+        rgba(186, 12, 248, 0.8) 88.89%,
+        rgba(251, 7, 217, 0.8) 100%
+        ); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box; 
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4)), 
+      linear-gradient(
+        135deg,
+        rgba(255, 0, 0, 0.8) 0%,
+        rgba(255, 154, 0, 0.8) 11.11%,
+        rgba(208, 222, 33, 0.8) 22.22%,
+        rgba(79, 220, 74, 0.8) 33.33%,
+        rgba(63, 218, 216, 0.8) 44.44%,
+        rgba(47, 201, 226, 0.8) 55.56%,
+        rgba(28, 127, 238, 0.8) 66.67%,
+        rgba(95, 21, 242, 0.85) 77.78%,
+        rgba(186, 12, 248, 0.8) 88.89%,
+        rgba(251, 7, 217, 0.8) 100%
+        ); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box; 
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+ display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+ left: 1.5em;
+ top: -0.05em;
+ width: 0.5em;
+ height: 1.25em;
+ border: solid gainsboro;
+ border-width: 0 0.25em 0.25em 0;
+ transform: rotate(45deg);
+}
+
+.speedSettings, .sizeSettings {
+  width: 95%;
+  margin: 5px auto 0px auto;
+}
+
+fieldset {
+  display: flex;
+  width: auto;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding-bottom: 3px;
+  background: rgba(255,255,255,0.6);
+  border: 3px solid rgba(103,150,213,0.8);
+}
+
+fieldset p {
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: black;
+  font-size: 13px;
+}
+
+fieldset .tooltip .tooltiptext {
+  width: 55px;
+  margin-left: -32px;
+  top: 125%; /* Position the tooltip above the input */
+}
+
+/* General styling for all radio buttons */
+input[type="radio"] {
+  width: 15px; /* Size of the radio button */
+  height: 15px; /* Size of the radio button */
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 50%; /* Make the radio button circular */
+  background: 
+    linear-gradient(to bottom, #fff, #fff) padding-box, 
+    linear-gradient(to bottom, red, yellow) border-box; /* Default gradient */
+  border: 3px solid transparent; /* Creates the space for the gradient */
+  outline: none; /* Remove default outline */
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease;
+  margin-bottom: -3px;
+}
+
+/* Slow Speed Radio Button Styling */
+#slowSpeed, #smallSize {
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%) padding-box, 
+    linear-gradient(135deg, rgba(32,230,0,0.8) 0%, rgba(161,255,208,0.8) 100%) border-box;
+}
+#slowSpeed:checked, #smallSize:checked {
+  background: 
+    radial-gradient(circle, rgba(11,87,0,1) 36%, rgba(44,255,32,1) 100%) padding-box, 
+    linear-gradient(135deg, rgba(32,230,0,0.8) 0%, rgba(161,255,208,0.8) 100%) border-box;
+}
+
+/* Medium Speed Radio Button Styling */
+#mediumSpeed, #mediumSize {
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%) padding-box, 
+    linear-gradient(135deg, rgba(224,255,0,0.8) 10%, rgba(255,248,0,0.8) 50%, rgba(254,174,0,0.8) 90%) border-box;
+}
+#mediumSpeed:checked, #mediumSize:checked {
+  background: 
+    radial-gradient(circle, rgba(112,83,1,1) 36%, rgba(199,151,0,1) 63%, rgba(254,255,32,1) 100%) padding-box, 
+    linear-gradient(135deg, rgba(224,255,0,0.8) 10%, rgba(255,248,0,0.8) 50%, rgba(254,174,0,0.8) 90%) border-box;
+}
+
+/* Fast Speed Radio Button Styling */
+#fastSpeed, #bigSize {
+  background: 
+    linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%) padding-box, 
+    linear-gradient(135deg, rgba(255,175,0,0.8) 21%, rgba(255,0,0,0.8) 87%) border-box;
+}
+#fastSpeed:checked, #bigSize:checked {
+  background: 
+    radial-gradient(circle, rgba(120,25,21,1) 36%, rgba(255,0,0,1) 100%) padding-box, 
+    linear-gradient(135deg, rgba(255,175,0,0.8) 21%, rgba(255,0,0,0.8) 87%) border-box;
+}
+
+
+@media (max-width: 768px) {
+   
+    .controls {
+        position: absolute;
+        top: 2.6vh;
+        left: 2.6vw;
+        margin-top: 45px;
+        display: flex;
+        transition: opacity 0.3s ease-in-out;
+        align-items: center;
+        width: 160px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    button {
+      margin: 5px auto 0px auto;
+      padding: 5px 5px;
+      font-size: 12px;
+      width: 45%;
+    }
+
+    #resetButton,
+    #pauseResumeButton {
+        width: 95%; /* Keep the wider buttons at the full width of the container */
+    }
+  
+    input[type="number"] {
+        margin: 5px 4px 0px 4px;
+        padding: 0px 5px;
+        font-size: 12px;
+        height: 25px;
+        width: 56px;
+        text-align: center;
+    }
+
+    .tooltip .tooltiptext {
+        left: 100%; 
+        top: 110%; 
+    }
+
+    #settingsButton {
+        top: 2.6vh;
+        left: 2.6vw;
+        width: 30px;
+        height: 30px;
+    }
+  
+    .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        font-size: 20px;
+        user-select: none;
+        margin: 0px 5px 0px 0px; 
+    }
+    .container .checkmark:after {
+      left: 1.4em;
+      top: 0em;
+      width: 0.3em;
+      height: 0.8em;
+      border-width: 0 0.15em 0.15em 0;
+    }
+    .checkmark {
+      height: 1.2em;
+      width: 3.2em;
+    }
+    input[type="radio"] {
+      width: 11px; 
+      height: 11px; 
+    }
+    fieldset p {
+      font-size: 12px;
+      font-family: sans-serif;
+      margin-bottom: -3px;
+    }
+  
+
+#forceMatrix th, #forceMatrix td {
+    padding: 1.5px; /* Smaller padding */
+    font-size: 7px; /* Smaller text size */
+    }
+
+#forceMatrix input[type="number"] {
+    font-size: 8px;
+  }
+#forceMatrix {
+    padding: 6px;
+    border-radius: 5px;
+    }
+  }
+
+
+
+/* Working on this table highlight code, not done yet */
+/* Highlight row and column on hover */
+#forceMatrix td {
+    position: relative;
+}
+
+#forceMatrix td:hover {
+    background-color: rgba(0, 123, 255, 0.3); /* Highlight color */
+}
+
+#forceMatrix td:hover::before,
+#forceMatrix td:hover::after {
+    content: '';
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 123, 255, 0.3); /* Highlight color */
+    z-index: -1;
+}
+
+/* Column highlight */
+#forceMatrix td:hover::before {
+    height: 10000px; /* Big enough to cover the Column */
+    width: 100%;
+    content: '↑\a↑\a↑\a↑\a↑\a↑\a↑\a↑';
+    position: absolute;
+    z-index: 2; /* Ensure it appears above other elements */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    font-weight: bold;
+    display: flex;
+    white-space: pre;
+    align-items: end;
+    justify-content: center;
+    pointer-events: none; 
+}
+
+/* Row highlight */
+#forceMatrix td:hover::after {
+    width: 10000px; /* Big enough to cover the Row */
+    height: 100%;
+    top: 0;
+    left: -9999px;
+    content: '→ → → → → → → →';
+    position: absolute;
+    z-index: 2; /* Ensure it appears above other elements */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    pointer-events: none; 
+}
+
+/* Prevent the highlight from affecting header cells */
+#forceMatrix th {
+    position: relative;
+    z-index: 3; /* Ensure headers are above the highlight */
+}
+
+#forceMatrix th:hover {
+    background-color: inherit;
+}
+
+/* Ensure headers do not inherit the hover effects */
+#forceMatrix th:hover::before,
+#forceMatrix th:hover::after {
+    display: none;
+}

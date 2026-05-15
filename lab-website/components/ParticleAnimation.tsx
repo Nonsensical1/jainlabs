@@ -46,8 +46,14 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
     canvas.addEventListener('mouseleave', handleMouseLeave);
 
     const handleResize = () => {
-      width = container.clientWidth;
-      height = container.clientHeight;
+      if (!container) return;
+      const newWidth = container.clientWidth;
+      const newHeight = container.clientHeight;
+      if (newWidth === width && newHeight === height) return;
+      if (newWidth === 0 || newHeight === 0) return;
+      
+      width = newWidth;
+      height = newHeight;
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.scale(dpr, dpr);
@@ -55,6 +61,8 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       canvas.style.height = `${height}px`;
       initParticles();
     };
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(container);
     window.addEventListener('resize', handleResize);
 
     let particles: Particle[] = [];
@@ -166,7 +174,8 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       const coords = [];
       const amplitude = Math.min(height * 0.3, 350); // Slightly reduced to fit 3D tilt
       const frequency = 0.012; // Adjusted frequency
-      const strandWidth = Math.min(width * 0.95, 1400);
+      // Extend the strand width beyond the viewport to prevent visible cutoff at the edges
+      const strandWidth = Math.max(width * 1.5, 2000);
       const startX = -strandWidth / 2;
       const endX = strandWidth / 2;
 
@@ -325,7 +334,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         // Hold text
         phase = 4;
         phaseTimer = 0;
-      } else if (phase === 4 && phaseTimer > 15) {
+      } else if (phase === 4 && phaseTimer > 40) {
         if (onComplete) {
           onComplete();
           phaseTimer = -99999; // prevent multiple calls
@@ -348,6 +357,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
     };
 
     return () => {
+      resizeObserver.disconnect();
       window.removeEventListener('resize', handleResize);
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
