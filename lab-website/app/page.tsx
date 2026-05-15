@@ -10,7 +10,7 @@ export default function HomePage() {
         <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-black">
           {/* Background Image */}
           <div 
-            className="absolute inset-0 z-0 bg-cover bg-center left-[5%] right-[5%] mx-auto" 
+            className="absolute inset-0 z-0 bg-cover bg-center left-[10%] right-[10%] mx-auto" 
             style={{ backgroundImage: 'url("/hero-bg.jpg")' }} 
           >
             {/* Dark overlay to make text readable */}
