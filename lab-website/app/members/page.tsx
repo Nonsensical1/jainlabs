@@ -367,7 +367,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/mahi1.jpg" alt="Mahika Balaraju" fill className="object-cover" />
+                  <Image src="/Member-headshots/mahi.jpg" alt="Mahika Balaraju" fill className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Mahika Balaraju</h3>
