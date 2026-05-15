@@ -7,14 +7,21 @@ export default function HomePage() {
     <SplashScreen>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-black">
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 z-0 bg-cover bg-center left-[10%] right-[10%] mx-auto" 
-            style={{ backgroundImage: 'url("/hero-bg.jpg")' }} 
-          >
-            {/* Dark overlay to make text readable */}
-            <div className="absolute inset-0 bg-black/40" />
+        <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-background overflow-hidden">
+          {/* Ambient Artificial Life Particles visible on the sides */}
+          <div className="absolute inset-0 z-0 opacity-80">
+            <LifeSimulation particleCount={1000} />
+          </div>
+
+          {/* Background Image - constrained with side white space */}
+          <div className="absolute inset-y-0 left-0 right-0 mx-auto max-w-[1200px] z-[1]">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: 'url("/hero-bg.jpg")' }}
+            >
+              {/* Dark overlay to make text readable */}
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
           </div>
           
           {/* Hero Content (Centered, White text) */}
