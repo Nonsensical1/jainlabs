@@ -28,7 +28,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Boyu.png" alt="Boyu Huang" fill className="object-cover" />
+                  <Image src="/Member-headshots/Boyu.png" alt="Boyu Huang" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Boyu Huang, PhD</h3>
@@ -47,7 +47,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Noah.jpeg" alt="Noah Rakestraw" fill className="object-cover" />
+                  <Image src="/Member-headshots/Noah.jpeg" alt="Noah Rakestraw" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Noah Rakestraw</h3>
@@ -61,7 +61,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Carlos1.png" alt="Carlos Orosco" fill className="object-cover" />
+                  <Image src="/Member-headshots/Carlos1.png" alt="Carlos Orosco" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Carlos Orosco</h3>
@@ -74,7 +74,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Briana.jpeg" alt="Briana Pizzano" fill className="object-cover" />
+                  <Image src="/Member-headshots/Briana.jpeg" alt="Briana Pizzano" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Briana Pizzano</h3>
@@ -87,7 +87,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Daisy.jpeg" alt="Daisy Aguilar Aguilar" fill className="object-cover" />
+                  <Image src="/Member-headshots/Daisy.jpeg" alt="Daisy Aguilar Aguilar" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Daisy Aguilar Aguilar</h3>
@@ -100,7 +100,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Dhruv.jpeg" alt="Dhruv Champaneri" fill className="object-cover" />
+                  <Image src="/Member-headshots/Dhruv.jpeg" alt="Dhruv Champaneri" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Dhruv Champaneri</h3>
@@ -113,7 +113,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Dheeraj.jpg" alt="Dheeraj Pedada" fill className="object-cover" />
+                  <Image src="/Member-headshots/Dheeraj.jpg" alt="Dheeraj Pedada" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Dheeraj Pedada</h3>
@@ -131,7 +131,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Dipan.jpg" alt="Dipan Das" fill className="object-cover" />
+                  <Image src="/Member-headshots/Dipan.jpg" alt="Dipan Das" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Dipan Das</h3>
@@ -145,7 +145,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Aaryan.jpg" alt="Aaryan Pasupuleti" fill className="object-cover" />
+                  <Image src="/Member-headshots/Aaryan.jpg" alt="Aaryan Pasupuleti" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Aaryan Pasupuleti</h3>
@@ -163,7 +163,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Victor.jpeg" alt="Victor Vargas" fill className="object-cover" />
+                  <Image src="/Member-headshots/Victor.jpeg" alt="Victor Vargas" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Victor Vargas</h3>
@@ -177,7 +177,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/August.jpeg" alt="August Bodin" fill className="object-cover" />
+                  <Image src="/Member-headshots/August.jpeg" alt="August Bodin" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">August Bodin</h3>
@@ -196,7 +196,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Jordan.jpeg" alt="Jordan Lewis" fill className="object-cover" />
+                  <Image src="/Member-headshots/Jordan.jpeg" alt="Jordan Lewis" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Jordan Lewis</h3>
@@ -210,7 +210,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Ian.png" alt="Ian Lange" fill className="object-cover" />
+                  <Image src="/Member-headshots/Ian.png" alt="Ian Lange" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Ian Lange</h3>
@@ -223,7 +223,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Coleen.jpg" alt="Coleen Peggs" fill className="object-cover" />
+                  <Image src="/Member-headshots/Coleen.jpg" alt="Coleen Peggs" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Coleen Peggs</h3>
@@ -237,7 +237,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Kate.jpeg" alt="Kate Beerensson" fill className="object-cover" />
+                  <Image src="/Member-headshots/Kate.jpeg" alt="Kate Beerensson" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Kate Beerensson</h3>
@@ -250,7 +250,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Sydney.jpeg" alt="Sydney Antal" fill className="object-cover" />
+                  <Image src="/Member-headshots/Sydney.jpeg" alt="Sydney Antal" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Sydney Antal</h3>
@@ -263,7 +263,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Anne.jpg" alt="Anne Fang" fill className="object-cover" />
+                  <Image src="/Member-headshots/Anne.jpg" alt="Anne Fang" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Anne Fang</h3>
@@ -276,7 +276,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Suraj.jpeg" alt="Suraj Raghunathan" fill className="object-cover" />
+                  <Image src="/Member-headshots/Suraj.jpeg" alt="Suraj Raghunathan" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Suraj Raghunathan</h3>
@@ -289,7 +289,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Yasmin.jpeg" alt="Yasmin Elhabashy" fill className="object-cover" />
+                  <Image src="/Member-headshots/Yasmin.jpeg" alt="Yasmin Elhabashy" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Yasmin Elhabashy</h3>
@@ -302,7 +302,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Nayan.jpeg" alt="Nayan Shah" fill className="object-cover" />
+                  <Image src="/Member-headshots/Nayan.jpeg" alt="Nayan Shah" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Nayan Shah</h3>
@@ -315,7 +315,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Lina.jpg" alt="Lina Mourad" fill className="object-cover" />
+                  <Image src="/Member-headshots/Lina.jpg" alt="Lina Mourad" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Lina Mourad</h3>
@@ -328,7 +328,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Divya.png" alt="Divya Adabala" fill className="object-cover" />
+                  <Image src="/Member-headshots/Divya.png" alt="Divya Adabala" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Divya Adabala</h3>
@@ -341,7 +341,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Kayli.jpg" alt="Kayli Zimmerman" fill className="object-cover" />
+                  <Image src="/Member-headshots/Kayli.jpg" alt="Kayli Zimmerman" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Kayli Zimmerman</h3>
@@ -354,7 +354,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Shruti.jpeg" alt="Shruti Sreekanth" fill className="object-cover" />
+                  <Image src="/Member-headshots/Shruti.jpeg" alt="Shruti Sreekanth" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Shruti Sreekanth</h3>
@@ -367,7 +367,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/mahi.jpg" alt="Mahika Balaraju" fill className="object-cover" />
+                  <Image src="/Member-headshots/mahi.jpg" alt="Mahika Balaraju" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Mahika Balaraju</h3>
@@ -380,7 +380,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Ivy.jpeg" alt="Ivy Browning" fill className="object-cover" />
+                  <Image src="/Member-headshots/Ivy.jpeg" alt="Ivy Browning" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Ivy Browning</h3>
@@ -398,7 +398,7 @@ export default function MembersPage() {
             <div className="mt-6 space-y-8">
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Santosh.jpeg" alt="Santosh Rananaware" fill className="object-cover" />
+                  <Image src="/Member-headshots/Santosh.jpeg" alt="Santosh Rananaware" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Santosh Rananaware</h3>
@@ -425,7 +425,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Mike.png" alt="Mike Hanna" fill className="object-cover" />
+                  <Image src="/Member-headshots/Mike.png" alt="Mike Hanna" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Mike Hanna, PhD</h3>
@@ -439,7 +439,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Minji.jpg" alt="Minji Chang" fill className="object-cover" />
+                  <Image src="/Member-headshots/Minji.jpg" alt="Minji Chang" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Minji Chang</h3>
@@ -453,7 +453,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Raymond.jpeg" alt="Raymond Cole Hautamaki" fill className="object-cover" />
+                  <Image src="/Member-headshots/Raymond.jpeg" alt="Raymond Cole Hautamaki" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Raymond Cole Hautamaki | MS</h3>
@@ -467,7 +467,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Reza.png" alt="Reza Ahamadimashhadi" fill className="object-cover" />
+                  <Image src="/Member-headshots/Reza.png" alt="Reza Ahamadimashhadi" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Reza Ahamadimashhadi</h3>
@@ -482,7 +482,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Zoe.jpeg" alt="Zoe Fang" fill className="object-cover" />
+                  <Image src="/Member-headshots/Zoe.jpeg" alt="Zoe Fang" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Zoe Fang | BS</h3>
@@ -495,7 +495,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Grace.jpeg" alt="Grace Shoemaker" fill className="object-cover" />
+                  <Image src="/Member-headshots/Grace.jpeg" alt="Grace Shoemaker" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Grace Shoemaker | BS</h3>
@@ -510,7 +510,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/dylan.jpeg" alt="Dylan Carman" fill className="object-cover" />
+                  <Image src="/Member-headshots/dylan.jpeg" alt="Dylan Carman" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Dylan Carman | BS</h3>
@@ -525,7 +525,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Nicolas.png" alt="Nicolas Macaluso" fill className="object-cover" />
+                  <Image src="/Member-headshots/Nicolas.png" alt="Nicolas Macaluso" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Nicolas Macaluso | MS Thesis</h3>
@@ -540,7 +540,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Emma.jpeg" alt="Emma Vesco" fill className="object-cover" />
+                  <Image src="/Member-headshots/Emma.jpeg" alt="Emma Vesco" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Emma Vesco | BS</h3>
@@ -555,7 +555,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Ayushma.jpeg" alt="Ayushma Joshi" fill className="object-cover" />
+                  <Image src="/Member-headshots/Ayushma.jpeg" alt="Ayushma Joshi" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Ayushma Joshi</h3>
@@ -568,7 +568,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Katelyn.jpeg" alt="Katelyn Meister" fill className="object-cover" />
+                  <Image src="/Member-headshots/Katelyn.jpeg" alt="Katelyn Meister" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Katelyn Meister</h3>
@@ -592,7 +592,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Katerina.jpeg" alt="Katerina Anamisis" fill className="object-cover" />
+                  <Image src="/Member-headshots/Katerina.jpeg" alt="Katerina Anamisis" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Katerina Anamisis</h3>
@@ -606,7 +606,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Sarah.jpeg" alt="Sarah Flannery" fill className="object-cover" />
+                  <Image src="/Member-headshots/Sarah.jpeg" alt="Sarah Flannery" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Sarah Flannery</h3>
@@ -630,7 +630,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Lilia.jpeg" alt="Lilia Yang" fill className="object-cover" />
+                  <Image src="/Member-headshots/Lilia.jpeg" alt="Lilia Yang" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Lilia Yang</h3>
@@ -654,7 +654,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-24 h-24 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Sucheta.png" alt="Sucheta Karmakar" fill className="object-cover" />
+                  <Image src="/Member-headshots/Sucheta.png" alt="Sucheta Karmakar" fill sizes="96px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Sucheta Karmakar</h3>
