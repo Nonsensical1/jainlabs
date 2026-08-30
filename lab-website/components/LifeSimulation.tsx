@@ -67,8 +67,8 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       isMouseOver = false;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
 
     class Particle {
       x: number;
@@ -376,8 +376,8 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseleave', handleMouseLeave);
+      canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(animationFrameId);
       clearInterval(intervalId);
     };

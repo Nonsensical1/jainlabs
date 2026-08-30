@@ -4,7 +4,7 @@ export default function OutreachPage() {
   return (
     <div className="relative min-h-screen overflow-hidden pt-24 pb-16">
       {/* Background Life Particles */}
-      <div className="fixed inset-0 z-0 opacity-80 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-80">
         <LifeSimulation edgeBias />
       </div>
 
