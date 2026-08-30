@@ -43,7 +43,7 @@ export default function HomePage() {
         {/* You can add more sections here below the hero */}
         <section className="relative px-6 py-24 bg-background overflow-hidden min-h-[500px] flex items-center">
           {/* Ambient Artificial Life Particles in the White Background */}
-          <div className="absolute inset-0 z-0 opacity-80">
+          <div className="fixed inset-0 z-0 opacity-80 pointer-events-none">
             <LifeSimulation particleCount={1000} />
           </div>
 
