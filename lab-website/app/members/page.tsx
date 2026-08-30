@@ -6,7 +6,9 @@ export default function MembersPage() {
     <div className="relative min-h-screen overflow-hidden pt-24 pb-16">
       {/* Background Life Particles */}
       <div className="absolute inset-0 z-0 opacity-80">
-        <LifeSimulation edgeBias />
+        <div className="sticky top-0 w-full h-screen overflow-hidden">
+          <LifeSimulation edgeBias particleCount={800} />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
