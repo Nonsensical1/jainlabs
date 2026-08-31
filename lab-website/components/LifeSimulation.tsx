@@ -412,5 +412,5 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
     };
   }, [particleCount]);
 
-  return <canvas ref={canvasRef} className={`block w-full h-full ${className || ''}`} />;
+  return <canvas ref={canvasRef} className={`block w-full h-full bg-white ${className || ''}`} />;
 }
