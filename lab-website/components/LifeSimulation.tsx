@@ -355,9 +355,13 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       const renderTop = Math.max(0, scrollY - buffer);
       const renderBottom = scrollY + viewportHeight + buffer;
 
-      // Only apply the trailing fade effect to the active render window
-      ctx!.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      // Use destination-out to gradually make older frames transparent.
+      // This creates a trailing effect without painting a solid color block, 
+      // which completely fixes the visible "rendering square" on non-white/dark backgrounds.
+      ctx!.globalCompositeOperation = 'destination-out';
+      ctx!.fillStyle = 'rgba(0, 0, 0, 0.3)'; // Color doesn't matter for destination-out, only alpha
       ctx!.fillRect(0, renderTop, canvas.width, viewportHeight + buffer * 2);
+      ctx!.globalCompositeOperation = 'source-over';
 
       // Instantly wipe any old pixels that have fallen outside the render window 
       // so frozen particles don't linger if you scroll away and scroll back
