@@ -352,10 +352,21 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       
       // Buffer a full viewport height above and below to prevent visual pop-in during fast scrolling
       const buffer = viewportHeight;
+      const renderTop = Math.max(0, scrollY - buffer);
+      const renderBottom = scrollY + viewportHeight + buffer;
 
-      // Only clear the visible viewport (plus a large buffer) instead of the entire massive canvas
+      // Only apply the trailing fade effect to the active render window
       ctx!.fillStyle = 'rgba(255, 255, 255, 0.3)';
-      ctx!.fillRect(0, Math.max(0, scrollY - buffer), canvas.width, viewportHeight + buffer * 2);
+      ctx!.fillRect(0, renderTop, canvas.width, viewportHeight + buffer * 2);
+
+      // Instantly wipe any old pixels that have fallen outside the render window 
+      // so frozen particles don't linger if you scroll away and scroll back
+      if (renderTop > 0) {
+        ctx!.clearRect(0, 0, canvas.width, renderTop);
+      }
+      if (renderBottom < canvas.height) {
+        ctx!.clearRect(0, renderBottom, canvas.width, canvas.height - renderBottom);
+      }
 
       buildGrid();
       particles.forEach(p => p.applyMouseForce());
