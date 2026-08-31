@@ -349,10 +349,13 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       // So -rect.top is the current scroll Y relative to the canvas.
       const scrollY = -rect.top;
       const viewportHeight = window.innerHeight;
+      
+      // Buffer a full viewport height above and below to prevent visual pop-in during fast scrolling
+      const buffer = viewportHeight;
 
-      // Only clear the visible viewport (plus a small buffer) instead of the entire massive canvas
+      // Only clear the visible viewport (plus a large buffer) instead of the entire massive canvas
       ctx!.fillStyle = 'rgba(255, 255, 255, 0.3)';
-      ctx!.fillRect(0, Math.max(0, scrollY - 100), canvas.width, viewportHeight + 200);
+      ctx!.fillRect(0, Math.max(0, scrollY - buffer), canvas.width, viewportHeight + buffer * 2);
 
       buildGrid();
       particles.forEach(p => p.applyMouseForce());
@@ -364,8 +367,8 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       particles.forEach(p => {
         p.update();
         
-        // VIEWPORT CULLING: Only render if the particle is within the visible viewport (plus 100px buffer)
-        if (p.y >= scrollY - 100 && p.y <= scrollY + viewportHeight + 100) {
+        // VIEWPORT CULLING: Only render if the particle is within the visible viewport (plus the large buffer)
+        if (p.y >= scrollY - buffer && p.y <= scrollY + viewportHeight + buffer) {
           if (!byColor[p.color]) byColor[p.color] = [];
           byColor[p.color].push(p);
         }
