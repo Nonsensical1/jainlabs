@@ -343,9 +343,16 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
     }, 60000);
 
     function animate() {
-      // Very slight fade for trailing effect, matching white background
+      const rect = canvas.getBoundingClientRect();
+      // rect.top is the position of the canvas top relative to the viewport. 
+      // If canvas is scrolled up, rect.top is negative.
+      // So -rect.top is the current scroll Y relative to the canvas.
+      const scrollY = -rect.top;
+      const viewportHeight = window.innerHeight;
+
+      // Only clear the visible viewport (plus a small buffer) instead of the entire massive canvas
       ctx!.fillStyle = 'rgba(255, 255, 255, 0.3)';
-      ctx!.fillRect(0, 0, canvas.width, canvas.height);
+      ctx!.fillRect(0, Math.max(0, scrollY - 100), canvas.width, viewportHeight + 200);
 
       buildGrid();
       particles.forEach(p => p.applyMouseForce());
@@ -356,8 +363,12 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       const byColor: Record<string, Particle[]> = {};
       particles.forEach(p => {
         p.update();
-        if (!byColor[p.color]) byColor[p.color] = [];
-        byColor[p.color].push(p);
+        
+        // VIEWPORT CULLING: Only render if the particle is within the visible viewport (plus 100px buffer)
+        if (p.y >= scrollY - 100 && p.y <= scrollY + viewportHeight + 100) {
+          if (!byColor[p.color]) byColor[p.color] = [];
+          byColor[p.color].push(p);
+        }
       });
 
       for (const color in byColor) {
