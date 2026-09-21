@@ -17,10 +17,13 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends) */}
+          {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends, Aligned with Navbar 'J') */}
           <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
-            {/* Left Translucent Panel (Flush to Left Edge, Slim Accent) */}
-            <div className="hidden lg:block w-20 xl:w-28 2xl:w-36 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0">
+            {/* Left Translucent Panel (Flush to Left Edge, Aligned to 'J' in Jain Lab) */}
+            <div 
+              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0"
+              style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
+            >
               <LifeSimulation transparent particleCount={180} />
             </div>
 
@@ -46,8 +49,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Translucent Panel (Flush to Right Edge, Slim Accent) */}
-            <div className="hidden lg:block w-20 xl:w-28 2xl:w-36 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0">
+            {/* Right Translucent Panel (Flush to Right Edge, Symmetrically Mirrored) */}
+            <div 
+              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0"
+              style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
+            >
               <LifeSimulation transparent particleCount={180} />
             </div>
           </div>
