@@ -33,10 +33,23 @@ export default function HomePage() {
           <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
             {/* Left Translucent Panel (Flush to Left Edge, Aligned to 'J' in Jain Lab) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0"
-              style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
+              className="hidden lg:block self-stretch h-full overflow-hidden relative shrink-0 z-10 border-r border-zinc-300/80 backdrop-blur-md"
+              style={{ 
+                width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))",
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 247, 250, 0.88) 50%, rgba(255, 255, 255, 0.92) 100%)",
+                boxShadow: "inset -1px 0 0 0 rgba(255, 255, 255, 0.95), inset 0 0 25px rgba(0, 0, 0, 0.03), 10px 0 35px -5px rgba(0, 0, 0, 0.28)"
+              }}
             >
-              <LifeSimulation transparent particleCount={180} />
+              {/* Frosted Glass Tactile Matte Surface Texture */}
+              <div 
+                className="absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay z-[1]"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+                }}
+              />
+              <div className="relative z-0 h-full w-full">
+                <LifeSimulation transparent particleCount={180} />
+              </div>
             </div>
 
             {/* Center Hero Content */}
@@ -63,10 +76,23 @@ export default function HomePage() {
 
             {/* Right Translucent Panel (Flush to Right Edge, Symmetrically Mirrored) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0"
-              style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
+              className="hidden lg:block self-stretch h-full overflow-hidden relative shrink-0 z-10 border-l border-zinc-300/80 backdrop-blur-md"
+              style={{ 
+                width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))",
+                background: "linear-gradient(225deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 247, 250, 0.88) 50%, rgba(255, 255, 255, 0.92) 100%)",
+                boxShadow: "inset 1px 0 0 0 rgba(255, 255, 255, 0.95), inset 0 0 25px rgba(0, 0, 0, 0.03), -10px 0 35px -5px rgba(0, 0, 0, 0.28)"
+              }}
             >
-              <LifeSimulation transparent particleCount={180} />
+              {/* Frosted Glass Tactile Matte Surface Texture */}
+              <div 
+                className="absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay z-[1]"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+                }}
+              />
+              <div className="relative z-0 h-full w-full">
+                <LifeSimulation transparent particleCount={180} />
+              </div>
             </div>
           </div>
         </section>
