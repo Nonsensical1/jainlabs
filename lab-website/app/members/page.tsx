@@ -364,7 +364,6 @@ export default function MembersPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Jayashri Madan</h3>
-                  <p className="text-sm font-medium text-foreground mt-1">Honors Program @ UF</p>
                   <p className="text-sm font-medium text-foreground mt-1">Major: Biomedical Engineering</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     My research interests focus on the engineering and development of CRISPR-Cas systems for genome editing. In the Jain Lab, I work on exploring Type V CRISPR-Cas systems for targeted DNA and RNA editing and developing single-effector systems from multi-effector Type 1 CRISPR-Cas complexes.
@@ -418,6 +417,7 @@ export default function MembersPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Elijah Walthall</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Elijah&apos;s research focuses on using CRISPR-Cas systems for prime editing and using extracellular vesicles as a targeted delivery mechanism for the CRISPR-Cas system.
                   </p>
