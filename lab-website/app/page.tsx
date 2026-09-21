@@ -19,20 +19,20 @@ export default function HomePage() {
           
           {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends) */}
           <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
-            {/* Left Translucent Panel (Flush to Left Edge & Top-to-Bottom) */}
-            <div className="hidden lg:block w-[18%] xl:w-[22%] 2xl:w-[24%] self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0">
-              <LifeSimulation transparent particleCount={300} />
+            {/* Left Translucent Panel (Flush to Left Edge, Slim Accent) */}
+            <div className="hidden lg:block w-20 xl:w-28 2xl:w-36 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={180} />
             </div>
 
             {/* Center Hero Content */}
-            <div className="flex-1 flex flex-col items-center justify-center text-center max-w-[850px] px-6 lg:px-10 pt-28 pb-16 my-auto">
+            <div className="flex-1 flex flex-col items-center justify-center text-center max-w-[1000px] px-6 lg:px-12 pt-28 pb-16 my-auto">
               <p className="text-lg md:text-xl text-zinc-300 mb-6 font-light tracking-wide">
                 University of Florida | Department of Chemical Engineering
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
                 NanoBiomolecular Precision Lab
               </h1>
-              <p className="text-base md:text-lg lg:text-xl text-zinc-200 leading-relaxed font-light max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-zinc-200 leading-relaxed font-light max-w-3xl mx-auto">
                 Pioneering the discovery and engineering of advanced biomolecular systems to enhance the precision and delivery of programmable genome-editing tools, such as CRISPR/Cas systems.
               </p>
               
@@ -46,9 +46,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Translucent Panel (Flush to Right Edge & Top-to-Bottom) */}
-            <div className="hidden lg:block w-[18%] xl:w-[22%] 2xl:w-[24%] self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0">
-              <LifeSimulation transparent particleCount={300} />
+            {/* Right Translucent Panel (Flush to Right Edge, Slim Accent) */}
+            <div className="hidden lg:block w-20 xl:w-28 2xl:w-36 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={180} />
             </div>
           </div>
         </section>
