@@ -7,7 +7,7 @@ export default function HomePage() {
     <SplashScreen>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative w-full min-h-screen min-h-[100dvh] flex items-center justify-center pt-24 pb-16 bg-black">
+        <section className="relative w-full min-h-screen min-h-[100dvh] flex items-stretch justify-center bg-black overflow-hidden">
           {/* Background Image */}
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center" 
@@ -17,15 +17,15 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          {/* Hero Content with Flanking Translucent Simulation Chambers */}
-          <div className="relative z-10 max-w-[1440px] w-full mx-auto px-6 flex items-center justify-center gap-6 lg:gap-8 xl:gap-12">
-            {/* Left Translucent Simulation Chamber */}
-            <div className="hidden lg:block w-44 xl:w-56 h-72 xl:h-96 rounded-2xl overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl relative shrink-0">
-              <LifeSimulation transparent particleCount={200} />
+          {/* Hero Content with Flanking Translucent Simulation Columns (Top to Bottom) */}
+          <div className="relative z-10 max-w-[1440px] w-full min-h-screen min-h-[100dvh] mx-auto px-6 flex items-stretch justify-center gap-6 lg:gap-8 xl:gap-12">
+            {/* Left Translucent Simulation Column */}
+            <div className="hidden lg:block w-40 xl:w-56 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-x border-b border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={300} />
             </div>
 
             {/* Center Hero Content */}
-            <div className="flex flex-col items-center text-center max-w-[850px] shrink">
+            <div className="flex flex-col items-center justify-center text-center max-w-[850px] pt-28 pb-16 my-auto shrink">
               <p className="text-lg md:text-xl text-zinc-300 mb-6 font-light tracking-wide">
                 University of Florida | Department of Chemical Engineering
               </p>
@@ -46,9 +46,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Translucent Simulation Chamber */}
-            <div className="hidden lg:block w-44 xl:w-56 h-72 xl:h-96 rounded-2xl overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl relative shrink-0">
-              <LifeSimulation transparent particleCount={200} />
+            {/* Right Translucent Simulation Column */}
+            <div className="hidden lg:block w-40 xl:w-56 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-x border-b border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={300} />
             </div>
           </div>
         </section>
