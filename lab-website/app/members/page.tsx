@@ -283,7 +283,7 @@ export default function MembersPage() {
                   <h3 className="text-xl font-medium text-foreground">Elijah Stewart</h3>
                   <p className="text-sm font-medium text-foreground mt-1">Major: Microbiology and Cellular Sciences</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
-                    Elijah works under Boyu Huang on creating Cas-tools and discovering new genetic engineering systems, working in software engineering, computational biology, molecular biology and evolutionary biology.
+                    Elijah works under Boyu Huang, creating Cas-tools and discovering new genetic engineering systems, working in software engineering, computational biology, molecular biology and evolutionary biology.
                   </p>
                 </div>
               </div>
