@@ -37,7 +37,39 @@ export default function ResearchPage() {
 
           <div className="mt-12 space-y-8">
             <p className="text-foreground leading-relaxed">
-              Ocampo RF, Orosco C, Huang B, West MS, Jain PK, <span className="font-medium">Taylor DW</span> Architecture of a DNA-guided Cas12a. <span className="italic">bioRxiv</span>, 2026. <a href="https://doi.org/10.1101/2026.03.19.712971" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a>
+              Ocampo RF, Orosco C, Huang B, West MS, Parker B, Jain PK, and <span className="font-medium">Taylor DW*</span> Architecture of a DNA-guided Cas12a. <span className="italic">Nature Structural &amp; Molecular Biology</span>, 2026, 1–5. <a href="https://doi.org/10.1038/s41594-026-01894-5" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Huang B, Orosco C, Stewart E, Balaraju M, Elhabashy YB, and <span className="font-medium">Jain PK*</span> Guide RNA binding induces reverse transcription bias during RT-qPCR analysis of RNA-targeting CRISPR/Cas systems. <span className="italic">bioRxiv</span>, 2026. <a href="https://doi.org/10.1101/2026.08.16.745121" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Guan K, Appleby NM, Shelly GP, Alam KMM, Champaneri D, Huang B, <span className="font-medium">Jain PK</span>, and <span className="font-medium">Taylor DW*</span> Asymmetric DNA targeting by RNA-guided TIGR-Tas systems. <span className="italic">bioRxiv</span>, 2026. <a href="https://doi.org/10.1101/2026.08.11.744272" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Iyyappan R<sup>§</sup>, Niu Y<sup>§</sup>, Li Y, Ming H, Pajdzik K, Rakestraw NR, Jain PK, He C, <span className="font-medium">Zong C*</span>, and <span className="font-medium">Jiang Z*</span> Single-nucleotide RNA m6A mapping in bovine preimplantation development reveals site-specific regulation of RPL12 at zygotic genome activation. <span className="italic">Cell Reports</span>, 2026, 45 (7). <a href="https://doi.org/10.1016/j.celrep.2026.117635" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding authors]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Macaluso N, Bhat M, Lu A, Chen Y, Nguyen L, <span className="font-medium">Jain PK</span>, and <span className="font-medium">Phillip JM*</span> Behavioral and Functional Profiling of Acomys cahirinus Fibroblasts Reveals Enhanced Matrix Remodeling Capacity. <span className="italic">bioRxiv</span>, 2026. <a href="https://doi.org/10.1101/2026.07.07.737114" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Rananaware SR, Narisetty KV, Shah RA, and <span className="font-medium">Jain PK*</span> CRISPR-based ex vivo gene editing of donor organs. <span className="italic">Nature Reviews Bioengineering</span>, 2026, 1–3. <a href="https://doi.org/10.1038/s44222-026-00462-2" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Orosco C, <span className="font-medium">Jain PK*</span>, and <span className="font-medium">Rivers AR*</span> TAMIPAMI: Software and methods for PAM/TAM identification for CRISPR and OMEGA gene editing systems. <span className="italic">bioRxiv</span>, 2026. <a href="https://doi.org/10.1101/2026.05.15.725432" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [*Corresponding authors]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Orosco C<sup>§</sup>, Huang B<sup>§</sup>, Rananaware SR<sup>§</sup>, Bodin AP, Browning I, Fang A, Baugh MP, Lange IH, Elhabashy YB, Balaraju M, Lewis JG, Shah NH, Hanna MP, Flannery SJ, Meister KS, Karalkar VN, and <span className="font-medium">Jain PK*</span> DNA-guided CRISPR–Cas12 for cellular RNA targeting. <span className="italic">Nature Biotechnology</span>, 2026, 1–12. <a href="https://doi.org/10.1038/s41587-026-03129-w" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding author]
+            </p>
+
+            <p className="text-foreground leading-relaxed">
+              Nguyen LT<sup>§</sup>, Rakestraw NR<sup>§</sup>, Pizzano BL, Iyyappan R, Young CB, Huang Y, Beerensson KT, Fang A, Antal SG, Anamisis KV, Peggs CMD, Yan J, Jing Y, Lewis JG, Burdine RD, Adamson B, Jiang Z, Toettcher JE, <span className="font-medium">Myhrvold C*</span>, and <span className="font-medium">Jain PK*</span> Efficient Genome Editing with Chimeric Oligonucleotide-Directed Editing. <span className="italic">Nature Communications</span>, 2026. <a href="https://doi.org/10.1038/s41467-026-71624-4" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding authors]
             </p>
 
             <p className="text-foreground leading-relaxed">
@@ -53,19 +85,7 @@ export default function ResearchPage() {
             </p>
 
             <p className="text-foreground leading-relaxed">
-              Iyyappan R<sup>§</sup>, Niu Y<sup>§</sup>, Hao M, Pajdzik K, Rakestraw NR, Jain PK, He C, <span className="font-medium">Zong C*</span>, and <span className="font-medium">Jiang Z*</span> Single-nucleotide resolution epitranscriptomic profiling uncovers dynamic m6A regulation in bovine preimplantation development. <span className="italic">bioRxiv.</span> 2025 Jul 10:2025-07. <a href="https://doi.org/10.1101/2025.07.07.663558" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding authors]
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              Orosco C<sup>§</sup>, Rananaware SR<sup>§</sup>, Huang B, Hanna MP, Ahmadimashhadi MR, Lewis JG, Baugh MP, Bodin AP, Flannery SJ, Lange IH, Fang ZR, Karalkar VN, Meister KS, and <span className="font-medium">Jain PK*</span> DNA-guided CRISPR/Cas12 for RNA targeting. <span className="italic">medRxiv.</span> 2024 Nov 21:2024-11. <a href="https://doi.org/10.1101/2024.11.21.24317744" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding author]
-            </p>
-
-            <p className="text-foreground leading-relaxed">
               Jia Y, Horvath K, Rananaware SR, Jain PK, and Sampath J Exploring the thermostability of CRISPR–Cas12b using molecular dynamics simulations. <span className="italic">Molecular Systems Design &amp; Engineering</span>, 2026. <a href="https://arxiv.org/abs/2408.11149" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a>
-            </p>
-
-            <p className="text-foreground leading-relaxed">
-              Nguyen LT<sup>§</sup>, Rakestraw NR<sup>§</sup>, Pizzano BL, Young CB, Huang Y, Beerensson KT, Fang A, Antal SG, Anamiss KV, Peggs CM, Yan J, Jing Y, Burdine RD, Adamson B, Toettcher JE, <span className="font-medium">Myhrvold C*</span>, and <span className="font-medium">Jain PK*</span> Efficient Genome Editing with Chimeric Oligonucleotide-Directed Editing. <span className="italic">Nature Communications</span>, 2026. <a href="https://doi.org/10.1101/2024.07.10.602888" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">[View]</a> [§Equal contributions][*Corresponding authors]
             </p>
 
             <p className="text-foreground leading-relaxed">

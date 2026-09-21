@@ -123,6 +123,19 @@ export default function MembersPage() {
                   </p>
                 </div>
               </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Ethan.jpg" alt="Ethan Rivers" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Ethan Rivers</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">BS: University of Massachusetts Amherst (Chemical Engineering)</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Ethan is a 2nd-year PhD student in Chemical Engineering and joined the Jain and He Labs in 2026. His current research focuses on extracellular vesicle-mediated delivery of CRISPR systems, gene editing for hearing loss modeling, and cell signaling in solid-state crystals. His broader research interests include genome editor delivery, organoid formation, and cellular engineering. Outside of the lab, he enjoys gardening, visiting theme parks with friends, and reading. He hopes his research will help advance genetic engineering technologies toward clinical applications.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -387,6 +400,107 @@ export default function MembersPage() {
                   <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Ivy is an undergraduate researcher.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Sahil.jpeg" alt="Sahil Ande" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Sahil Ande</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Biochemistry</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Sahil Ande is a second-year Biochemistry major working under Dr. Boyu Huang on precise DNA/RNA editing and CRISPR screening technologies.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Veronica.png" alt="Veronica Igwe" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Veronica Igwe</h3>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Veronica is working on a project that uses CRISPR reactions to develop a point-of-care device for early HIV-1 detection. Her research interests include biomedical hardware and embedded systems design.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Lu.jpeg" alt="Lu Ighodalo" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Lu Ighodalo</h3>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Lu is currently working on an accessible device for early HIV detection.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Jayashri.jpeg" alt="Jayashri Madan" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Jayashri Madan</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Honors Program @ UF</p>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Biomedical Engineering</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    My research interests focus on the engineering and development of CRISPR-Cas systems for genome editing. In the Jain Lab, I work on exploring Type V CRISPR-Cas systems for targeted DNA and RNA editing and developing single-effector systems from multi-effector Type 1 CRISPR-Cas complexes.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Axel Vega-Garcia</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Computer Engineering</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Axel&apos;s research interests span embedded systems, artificial intelligence, and wireless network systems. He is currently developing embedded software and microcontroller firmware for point-of-care diagnostic devices.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Diego.png" alt="Diego Tkachenko" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Diego Tkachenko</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Chemical Engineering</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Diego is interested in the development of an early detection system for HIV-1 with the use of the CRISPR/Cas system.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Sabina.jpeg" alt="Sabina Chamoy" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Sabina Chamoy</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Honors and Research Scholar</p>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Biotechnology | Minor: Russian</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Sabina is a second‑year Honors and Research Scholar pursuing a career in genetics and gene editing. Inspired early on by Colossal Biosciences, she is driven by interests in CRISPR technologies, gene therapy, stem cell biology, and neurodegenerative disease research. In the Jain Lab, Sabina works on AAV virology, CRISPR‑Cas12a packaging strategies, TIGR‑Tas enzyme characterization, and DNA fragment assembly projects under the mentorship of Dhruv Champaneri.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/ElijahW.jpeg" alt="Elijah Walthall" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Elijah Walthall</h3>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Elijah&apos;s research focuses on using CRISPR-Cas systems for prime editing and using extracellular vesicles as a targeted delivery mechanism for the CRISPR-Cas system.
                   </p>
                 </div>
               </div>
