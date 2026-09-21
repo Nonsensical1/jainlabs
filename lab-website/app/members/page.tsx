@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { User } from "lucide-react"
 import LifeSimulation from "@/components/LifeSimulation"
 
 export default function MembersPage() {
@@ -456,7 +457,9 @@ export default function MembersPage() {
               </div>
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative"></div>
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative flex items-center justify-center">
+                  <User className="w-14 h-14 md:w-16 md:h-16 text-muted-foreground/40" />
+                </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Axel Vega-Garcia</h3>
                   <p className="text-sm font-medium text-foreground mt-1">Major: Computer Engineering</p>

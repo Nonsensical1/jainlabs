@@ -1,3 +1,4 @@
+import Image from "next/image"
 import LifeSimulation from "@/components/LifeSimulation"
 
 export default function PIPage() {
@@ -11,9 +12,8 @@ export default function PIPage() {
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="bg-background/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-border/50">
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Headshot — drop an image file at /public/pi-headshot.jpg and uncomment the img tag */}
             <div className="w-40 h-48 md:w-48 md:h-56 shrink-0 bg-muted rounded-xl overflow-hidden relative">
-              {/* <img src="/pi-headshot.jpg" alt="Dr. Piyush K. Jain" className="w-full h-full object-cover" /> */}
+              <Image src="/pi-headshot.jpg" alt="Dr. Piyush K. Jain" fill sizes="(max-width: 768px) 160px, 192px" className="object-cover" priority />
             </div>
 
             <div>
