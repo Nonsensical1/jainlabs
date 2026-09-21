@@ -277,6 +277,19 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Eli.jpg" alt="Elijah Stewart" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Elijah Stewart</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Microbiology and Cellular Sciences</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Elijah works under Boyu Huang on creating Cas-tools and discovering new genetic engineering systems, working in software engineering, computational biology, molecular biology and evolutionary biology.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
                   <Image src="/Member-headshots/Anne.jpg" alt="Anne Fang" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
