@@ -7,7 +7,7 @@ export default function HomePage() {
     <SplashScreen>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative w-full min-h-screen min-h-[100dvh] flex items-stretch justify-center bg-black overflow-hidden pt-20 pb-8">
+        <section className="relative w-full min-h-screen min-h-[100dvh] flex items-stretch justify-center bg-black overflow-hidden">
           {/* Background Image */}
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center" 
@@ -17,18 +17,15 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          {/* Hero Content with Flanking Organic Simulation Pods */}
-          <div className="relative z-10 max-w-[1440px] w-full min-h-[calc(100dvh-7rem)] mx-auto px-6 flex items-stretch justify-center gap-6 lg:gap-8 xl:gap-12">
-            {/* Left Organic Simulation Pod */}
-            <div 
-              className="hidden lg:block w-44 xl:w-60 self-stretch overflow-hidden backdrop-blur-xl bg-white/10 border border-white/25 shadow-2xl relative shrink-0 transition-all duration-700 hover:border-white/40"
-              style={{ borderRadius: "55% 45% 65% 35% / 25% 35% 25% 35%" }}
-            >
+          {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends) */}
+          <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
+            {/* Left Translucent Panel (Flush to Left Edge & Top-to-Bottom) */}
+            <div className="hidden lg:block w-36 xl:w-56 2xl:w-72 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0">
               <LifeSimulation transparent particleCount={300} />
             </div>
 
             {/* Center Hero Content */}
-            <div className="flex flex-col items-center justify-center text-center max-w-[850px] py-8 my-auto shrink">
+            <div className="flex flex-col items-center justify-center text-center max-w-[850px] px-6 pt-28 pb-16 my-auto shrink">
               <p className="text-lg md:text-xl text-zinc-300 mb-6 font-light tracking-wide">
                 University of Florida | Department of Chemical Engineering
               </p>
@@ -49,11 +46,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Organic Simulation Pod */}
-            <div 
-              className="hidden lg:block w-44 xl:w-60 self-stretch overflow-hidden backdrop-blur-xl bg-white/10 border border-white/25 shadow-2xl relative shrink-0 transition-all duration-700 hover:border-white/40"
-              style={{ borderRadius: "45% 55% 35% 65% / 35% 25% 35% 25%" }}
-            >
+            {/* Right Translucent Panel (Flush to Right Edge & Top-to-Bottom) */}
+            <div className="hidden lg:block w-36 xl:w-56 2xl:w-72 self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0">
               <LifeSimulation transparent particleCount={300} />
             </div>
           </div>
