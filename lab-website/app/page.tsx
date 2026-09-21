@@ -17,25 +17,38 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          {/* Hero Content (Centered, White text) */}
-          <div className="relative z-10 max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-            <p className="text-lg md:text-xl text-zinc-300 mb-6 font-light tracking-wide">
-              University of Florida | Department of Chemical Engineering
-            </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-              NanoBiomolecular Precision Lab
-            </h1>
-            <p className="text-lg md:text-xl text-zinc-200 leading-relaxed font-light">
-              Pioneering the discovery and engineering of advanced biomolecular systems to enhance the precision and delivery of programmable genome-editing tools, such as CRISPR/Cas systems.
-            </p>
-            
-            <div className="mt-10 flex gap-6 text-lg">
-              <Link href="/research" className="text-white border border-white/30 px-6 py-3 rounded-md hover:bg-white/10 transition-colors">
-                Our Research
-              </Link>
-              <Link href="/members" className="text-white bg-white/20 px-6 py-3 rounded-md hover:bg-white/30 transition-colors">
-                Meet the Lab
-              </Link>
+          {/* Hero Content with Flanking Translucent Simulation Chambers */}
+          <div className="relative z-10 max-w-[1440px] w-full mx-auto px-6 flex items-center justify-center gap-6 lg:gap-8 xl:gap-12">
+            {/* Left Translucent Simulation Chamber */}
+            <div className="hidden lg:block w-44 xl:w-56 h-72 xl:h-96 rounded-2xl overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={200} />
+            </div>
+
+            {/* Center Hero Content */}
+            <div className="flex flex-col items-center text-center max-w-[850px] shrink">
+              <p className="text-lg md:text-xl text-zinc-300 mb-6 font-light tracking-wide">
+                University of Florida | Department of Chemical Engineering
+              </p>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+                NanoBiomolecular Precision Lab
+              </h1>
+              <p className="text-lg md:text-xl text-zinc-200 leading-relaxed font-light">
+                Pioneering the discovery and engineering of advanced biomolecular systems to enhance the precision and delivery of programmable genome-editing tools, such as CRISPR/Cas systems.
+              </p>
+              
+              <div className="mt-10 flex gap-6 text-lg">
+                <Link href="/research" className="text-white border border-white/30 px-6 py-3 rounded-md hover:bg-white/10 transition-colors">
+                  Our Research
+                </Link>
+                <Link href="/members" className="text-white bg-white/20 px-6 py-3 rounded-md hover:bg-white/30 transition-colors">
+                  Meet the Lab
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Translucent Simulation Chamber */}
+            <div className="hidden lg:block w-44 xl:w-56 h-72 xl:h-96 rounded-2xl overflow-hidden backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl relative shrink-0">
+              <LifeSimulation transparent particleCount={200} />
             </div>
           </div>
         </section>

@@ -15,9 +15,10 @@ interface LifeSimulationProps {
   className?: string;
   particleCount?: number; // if provided, overrides dynamic calculation
   edgeBias?: boolean; // if true, 70% of particles spawn in the outer margins
+  transparent?: boolean;
 }
 
-export default function LifeSimulation({ className, particleCount, edgeBias = false }: LifeSimulationProps) {
+export default function LifeSimulation({ className, particleCount, edgeBias = false, transparent = false }: LifeSimulationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -138,10 +139,14 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
       }
 
       wrapEdges() {
-        if (this.x < 0) this.x += canvas.width;
-        if (this.x > canvas.width) this.x -= canvas.width;
-        if (this.y < 0) this.y += canvas.height;
-        if (this.y > canvas.height) this.y -= canvas.height;
+        if (canvas.width > 0) {
+          if (this.x < 0) this.x = ((this.x % canvas.width) + canvas.width) % canvas.width;
+          if (this.x >= canvas.width) this.x = this.x % canvas.width;
+        }
+        if (canvas.height > 0) {
+          if (this.y < 0) this.y = ((this.y % canvas.height) + canvas.height) % canvas.height;
+          if (this.y >= canvas.height) this.y = this.y % canvas.height;
+        }
       }
 
       applyForces(particles: Particle[], grid: Record<string, Particle[]>) {
@@ -412,5 +417,5 @@ export default function LifeSimulation({ className, particleCount, edgeBias = fa
     };
   }, [particleCount]);
 
-  return <canvas ref={canvasRef} className={`block w-full h-full bg-white ${className || ''}`} />;
+  return <canvas ref={canvasRef} className={`block w-full h-full ${transparent ? 'bg-transparent' : 'bg-white'} ${className || ''}`} />;
 }
