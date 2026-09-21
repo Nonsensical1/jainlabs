@@ -7,7 +7,7 @@ export default function HomePage() {
     <SplashScreen>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-24 pb-16 bg-black">
+        <section className="relative w-full min-h-screen min-h-[100dvh] flex items-center justify-center pt-24 pb-16 bg-black">
           {/* Background Image */}
           <div 
             className="absolute inset-0 z-0 bg-cover bg-center" 
@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="relative z-10 max-w-[1200px] mx-auto text-center bg-background/80 backdrop-blur-sm p-8 rounded-2xl border border-border/50">
             <h2 className="text-3xl font-bold text-foreground mb-6">Advancing Precision Medicine</h2>
             <p className="text-lg text-muted-foreground mx-auto">
-              Combining bioinformatics, protein and nucleic acid engineering, bioorganic chemistry, directed evolution, and machine learning, Jain Lab develops cutting-edge technologies for the targeted delivery, detection, and repair of DNA, RNA, and proteins in specific tissues. The lab's innovative research aims to revolutionize diagnosing and treating infectious diseases, genetic disorders, and cancer.
+              Combining bioinformatics, protein and nucleic acid engineering, bioorganic chemistry, directed evolution, and machine learning, Jain Lab develops cutting-edge technologies for the targeted delivery, detection, and repair of DNA, RNA, and proteins in specific tissues. The lab&apos;s innovative research aims to revolutionize diagnosing and treating infectious diseases, genetic disorders, and cancer.
             </p>
           </div>
         </section>
