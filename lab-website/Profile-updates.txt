@@ -1,0 +1,35 @@
+Sahil Ande-> 
+Sahil Ande is a second-year Biochemistry major working under Dr. Boyu Huang on precise DNA/RNA editing and CRISPR screening technologies
+
+Veronica Igwe-> 
+"Veronica is working on a project that uses CRISPR reactions to develop a point-of-care device for early HIV-1 detection. Her research interests include biomedical hardware and embedded systems design
+
+Lu Ighodalo->
+Lu is currently working on an accessible device for early HIV detection
+
+Jayashri Madan->  
+Major: Biomedical Engineering 
+Honors Program @ UF
+My research interests focus on the engineering and development of CRISPR-Cas systems for genome editing. In the Jain Lab, I work on exploring Type V CRISPR-Cas systems for targeted DNA and RNA editing and developing single-effector systems from multi-effector Type 1 CRISPR-Cas complexes. 
+
+Ethan Rivers-> 
+Ethan is a 2nd-year PhD student in Chemical Engineering and joined the Jain and He Labs in 2026. His current research focuses on extracellular vesicle-mediated delivery of CRISPR systems, gene editing for hearing loss modeling, and cell signaling in solid-state crystals. His broader research interests include genome editor delivery, organoid formation, and cellular engineering.
+Ethan earned his B.S. in Chemical Engineering from the University of Massachusetts Amherst in 2025. Outside of the lab, he enjoys gardening, visiting theme parks with friends, and reading. He hopes his research will help advance genetic engineering technologies toward clinical applications.
+
+Axel Vega-Garcia-> 
+Major: Computer Engineering
+
+Axel's research interests span embedded systems, artificial intelligence, and wireless network systems. He is currently developing embedded software and microcontroller firmware for point-of-care diagnostic devices.
+
+Diego Tkachenko->
+Major: Chemical Engineering. 
+Diego is interested in the development of an early detection system for HIV-1 with the use of the CRISPR/Cas system. Please let me know if there is anything I can change or improve 
+
+Sabina Chamoy:
+Major: Biotechnology
+Minor: Russian
+
+Sabina is a second‑year Honors and Research Scholar pursuing a career in genetics and gene editing. Inspired early on by Colossal Biosciences, she is driven by interests in CRISPR technologies, gene therapy, stem cell biology, and neurodegenerative disease research. In the Jain Lab, Sabina works on AAV virology, CRISPR‑Cas12a packaging strategies, TIGR‑Tas enzyme characterization, and DNA fragment assembly projects under the mentorship of Dhruv Champaneri.
+
+Elijah Walthall-> 
+Elijah's research focuses on using CRISPR-Cas systems for prime editing and using extracellular vesicles as a targeted delivery mechanism for the CRISPR-Cas system.
