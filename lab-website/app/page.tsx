@@ -16,12 +16,24 @@ export default function HomePage() {
             {/* Dark overlay to make text readable */}
             <div className="absolute inset-0 bg-black/40" />
           </div>
+
+          {/* Left Column White Background Gutter (Replaces title image behind left column) */}
+          <div 
+            className="hidden lg:block absolute top-0 bottom-0 left-0 bg-white z-[1]" 
+            style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }} 
+          />
+
+          {/* Right Column White Background Gutter (Replaces title image behind right column) */}
+          <div 
+            className="hidden lg:block absolute top-0 bottom-0 right-0 bg-white z-[1]" 
+            style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }} 
+          />
           
-          {/* Hero Content with Flanking Matte White Glass Columns (Flush to Screen Ends, Aligned with Navbar 'J') */}
+          {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends, Aligned with Navbar 'J') */}
           <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
-            {/* Left Column (Flush to Left Edge, Aligned to 'J' in Jain Lab, Matte White Glass) */}
+            {/* Left Translucent Panel (Flush to Left Edge, Aligned to 'J' in Jain Lab) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-xl bg-white/80 border-r border-white/60 shadow-2xl relative shrink-0 z-10"
+              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0"
               style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
             >
               <LifeSimulation transparent particleCount={180} />
@@ -49,9 +61,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column (Flush to Right Edge, Symmetrically Mirrored, Matte White Glass) */}
+            {/* Right Translucent Panel (Flush to Right Edge, Symmetrically Mirrored) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-xl bg-white/80 border-l border-white/60 shadow-2xl relative shrink-0 z-10"
+              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0"
               style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
             >
               <LifeSimulation transparent particleCount={180} />
