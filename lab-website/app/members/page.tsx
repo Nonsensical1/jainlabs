@@ -156,19 +156,6 @@ export default function MembersPage() {
                   </p>
                 </div>
               </div>
-
-              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
-                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Aaryan.jpg" alt="Aaryan Pasupuleti" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium text-foreground">Aaryan Pasupuleti</h3>
-                  <p className="text-sm font-medium text-foreground mt-1">MS: University of Florida (Computer Science)</p>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    Aaryan was a Software Engineer at Verizon before beginning masters at the University of Florida. His interests include web development and machine learning.
-                  </p>
-                </div>
-              </div>
             </div>
           </section>
 
@@ -712,6 +699,19 @@ export default function MembersPage() {
                   <p className="text-sm font-medium text-foreground mt-1">Current: PBI2 Distinguished Postdoc Scholar at Princeton University (Cameron Myrhvold and Jared Toettcher labs)</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Long is the first PhD student who graduated from Jain Lab. During his time in the lab, Long led the development of CRISPR-based ENHANCE, SPADE, SPLENDID, cCRISPR, and many other gene editing and diagnostic projects and published 6 first/co-first author papers.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
+                <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
+                  <Image src="/Member-headshots/Aaryan.jpg" alt="Aaryan Pasupuleti" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-medium text-foreground">Aaryan Pasupuleti</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">MS: University of Florida (Computer Science)</p>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Aaryan was a Software Engineer at Verizon before beginning masters at the University of Florida. His interests included web development and machine learning.
                   </p>
                 </div>
               </div>
