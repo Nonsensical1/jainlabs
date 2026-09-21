@@ -17,14 +17,14 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40" />
           </div>
           
-          {/* Hero Content with Flanking Translucent Rectangles (Flush to Screen Ends, Aligned with Navbar 'J') */}
+          {/* Hero Content with Flanking White Simulation Columns (Flush to Screen Ends, Aligned with Navbar 'J') */}
           <div className="relative z-10 w-full min-h-screen min-h-[100dvh] flex items-stretch justify-between">
-            {/* Left Translucent Panel (Flush to Left Edge, Aligned to 'J' in Jain Lab) */}
+            {/* Left Column (Flush to Left Edge, Aligned to 'J' in Jain Lab, White Background) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-r border-white/20 shadow-2xl relative shrink-0"
+              className="hidden lg:block self-stretch h-full overflow-hidden bg-white border-r border-zinc-200 shadow-2xl relative shrink-0 z-10"
               style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
             >
-              <LifeSimulation transparent particleCount={180} />
+              <LifeSimulation particleCount={180} />
             </div>
 
             {/* Center Hero Content */}
@@ -49,12 +49,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Translucent Panel (Flush to Right Edge, Symmetrically Mirrored) */}
+            {/* Right Column (Flush to Right Edge, Symmetrically Mirrored, White Background) */}
             <div 
-              className="hidden lg:block self-stretch h-full overflow-hidden backdrop-blur-md bg-white/10 border-l border-white/20 shadow-2xl relative shrink-0"
+              className="hidden lg:block self-stretch h-full overflow-hidden bg-white border-l border-zinc-200 shadow-2xl relative shrink-0 z-10"
               style={{ width: "calc(max(3.5rem, (100vw - 1200px) / 2 + 1.5rem))" }}
             >
-              <LifeSimulation transparent particleCount={180} />
+              <LifeSimulation particleCount={180} />
             </div>
           </div>
         </section>
