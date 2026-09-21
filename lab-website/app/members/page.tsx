@@ -338,6 +338,7 @@ export default function MembersPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Veronica Igwe</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Computer Science</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Veronica is working on a project that uses CRISPR reactions to develop a point-of-care device for early HIV-1 detection. Her research interests include biomedical hardware and embedded systems design.
                   </p>
@@ -350,6 +351,7 @@ export default function MembersPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Lu Ighodalo</h3>
+                  <p className="text-sm font-medium text-foreground mt-1">Major: Computer Science</p>
                   <p className="mt-4 text-muted-foreground leading-relaxed">
                     Lu is currently working on an accessible device for early HIV detection.
                   </p>
