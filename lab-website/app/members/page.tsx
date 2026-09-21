@@ -101,7 +101,7 @@ export default function MembersPage() {
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
-                  <Image src="/Member-headshots/Dhruv.jpeg" alt="Dhruv Champaneri" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
+                  <Image src="/Member-headshots/Dhruv2.jpg" alt="Dhruv Champaneri" fill sizes="(max-width: 768px) 128px, 160px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-foreground">Dhruv Champaneri</h3>
