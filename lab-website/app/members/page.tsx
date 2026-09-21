@@ -618,7 +618,6 @@ export default function MembersPage() {
                   </p>
                 </div>
               </div>
-            </div>
 
               <div className="flex flex-col md:flex-row gap-6 items-start border-b border-border pb-8 last:border-0">
                 <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 bg-muted rounded-md overflow-hidden relative">
