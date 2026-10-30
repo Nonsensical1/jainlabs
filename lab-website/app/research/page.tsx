@@ -1,9 +1,12 @@
+import Image from "next/image"
 import LifeSimulation from "@/components/LifeSimulation"
 
 const researchAreas = [
   {
     number: 1,
     title: "Discovery and Engineering of Novel CRISPR/Cas Systems",
+    image: "/Fig1-.png",
+    imageAlt: "CRISPR-EXOTIC (Novel CRISPR) - Discovery and Engineering of Novel CRISPR/Cas Systems",
     description:
       "We are interested in discovering and engineering novel CRISPR/Cas systems towards improving the repertoire for gene editing, gene correction, and diagnostics. Our lab is also investigating the mechanism of various Type II, V, and VI CRISPR systems.",
     publications: [],
@@ -11,6 +14,8 @@ const researchAreas = [
   {
     number: 2,
     title: "Enhanced Sensitivity, Specificity, and Control of CRISPR/Cas Systems",
+    image: "/Fig2-.png",
+    imageAlt: "CRISPR-AIM and CRISPR-PLUS (Light-activated) - Enhanced Sensitivity, Specificity, and Control of CRISPR/Cas Systems",
     description:
       "We focus on understanding the CRISPR/Cas mechanisms to engineer novel genome editing tools with improved activity, specificity, sensitivity, and function. To edit genes at precise location and time, we created a light-activatable CRISPR-PLUS (CRISPR-precise light-mediated unveiling of sgRNAs) system by incorporating a photocleavable complementary oligonucleotide to the guide RNA, which allowed precise control of genome editing with light. We also demonstrated precise control of CRISPR activity with multiple different sgRNAs concurrently using CRISPR-PLUS in vitro, enabling the multiplexing capabilities of CRISPR-PLUS. We recently discovered that CRISPR-PLUS demonstrates significant improvement in specificity of CRISPR, which is currently being investigated in our lab. In addition, we also discovered various modifications on crRNAs that can drastically enhance the sensitivity and specificity of CRISPR/Cas systems.",
     publications: [
@@ -37,6 +42,8 @@ const researchAreas = [
   {
     number: 3,
     title: "Targeted Delivery of CRISPR/Cas Systems with Improved Genomic Integration",
+    image: "/Fig3-.png",
+    imageAlt: "CRISPR-GPS (Targeted delivery) - Targeted Delivery of CRISPR/Cas Systems with Improved Genomic Integration",
     description:
       "We are engineering both non-viral and viral vectors for delivery for efficient editing and genome integration. Recently we developed an efficient targeted delivery system in vitro and in vivo, using guiding peptide sequences (GPS) carrying a lipid tail, cell-penetrating domain, and a targeting domain. When mixed with CRISPR/Cas, we discovered that these peptide-lipids form nanocomplexes electrostatically (CRISPR-GPS) and can deliver the complexes to a variety of cell lines and can be potentially applied in vivo.",
     publications: [
@@ -51,6 +58,8 @@ const researchAreas = [
   {
     number: 4,
     title: "CRISPR/Cas as Improved Diagnostics",
+    image: "/Fig4-.png",
+    imageAlt: "CRISPR-ENHANCE and CRISPR-EPI - CRISPR/Cas as Improved Diagnostics",
     description:
       "We recently discovered that modified crRNAs for LbCas12a systems can increase the speed of trans-cleavage by 3.2-fold, making it one of the fastest reported CRISPR/Cas in terms of trans-cleavage activity — we termed it CRISPR-ENHANCE. Using CRISPR-ENHANCE, we observed up to femtomolar sensitivity of nucleic acid detection without any target amplification. We applied the technology for improved detection of SARS-CoV-2 RNA using paper-based diagnostics as well as for detecting prostate cancer, HIV & HCV genes. We also discovered a significant improvement in specificity of detection by several-fold (up to 8.8-fold) with CRISPR-ENHANCE.",
     publications: [
@@ -95,7 +104,7 @@ export default function ResearchPage() {
                   {area.title}
                 </h2>
 
-                {/* Two-column: text + image placeholder */}
+                {/* Two-column: text + image */}
                 <div className="mt-6 grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
                   {/* Description */}
                   <div className="lg:col-span-3">
@@ -104,10 +113,18 @@ export default function ResearchPage() {
                     </p>
                   </div>
 
-                  {/* Image placeholder */}
+                  {/* Research Figure */}
                   <div className="lg:col-span-2">
-                    <div className="w-full aspect-[4/3] bg-muted/60 rounded-xl flex items-center justify-center">
-                      <span className="text-sm text-muted-foreground">Research figure</span>
+                    <div className="w-full aspect-[4/3] bg-white rounded-xl border border-border/60 p-4 shadow-sm flex items-center justify-center overflow-hidden">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={area.image}
+                          alt={area.imageAlt}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 1024px) 100vw, 400px"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
