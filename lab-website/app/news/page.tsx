@@ -16,6 +16,66 @@ export default function NewsPage() {
 
           <div className="mt-12 space-y-10">
             <article>
+              <p className="text-muted-foreground">Oct 14, 2026</p>
+              <h2 className="mt-1 text-lg font-medium text-foreground">
+                <a href="https://doi.org/10.1038/s41594-026-01894-5" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Architecture of a DNA-guided Cas12a published in Nature Structural &amp; Molecular Biology
+                </a>
+              </h2>
+              <p className="mt-2 text-foreground">
+                Collaborating with researchers at UT Austin, Jain Lab members Carlos Orosco, Boyu Huang, and Dr. Jain used cryo-electron microscopy (cryo-EM) to reveal the atomic structure of DNA-guided Cas12a. The study shows how an engineered single strand of DNA folds into a unique &quot;hairpin bridge&quot; to guide the complex to target RNA, enabling ultra-precise viral diagnostics and safer RNA-targeting therapies.
+              </p>
+            </article>
+
+            <article>
+              <p className="text-muted-foreground">Jun 29, 2026</p>
+              <h2 className="mt-1 text-lg font-medium text-foreground">
+                <a href="https://doi.org/10.1038/s44222-026-00462-2" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Dr. Jain and colleagues review ex vivo gene editing of donor organs in Nature Reviews Bioengineering
+                </a>
+              </h2>
+              <p className="mt-2 text-foreground">
+                Dr. Jain and collaborators published a review on CRISPR-based ex vivo gene editing and machine perfusion for donor organs, addressing latent viral infections and allograft optimization to improve patient outcomes in transplantation medicine.
+              </p>
+            </article>
+
+            <article>
+              <p className="text-muted-foreground">May 15, 2026</p>
+              <h2 className="mt-1 text-lg font-medium text-foreground">
+                <a href="https://news.ufl.edu/2026/05/worlds-first-dna-guided-crispr/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  UF News features Jain Lab breakthrough: World&apos;s first DNA-guided CRISPR published in Nature Biotechnology
+                </a>
+              </h2>
+              <p className="mt-2 text-foreground">
+                Jain Lab researchers developed the world&apos;s first DNA-guided CRISPR system (&Psi;DNA), overturning the long-standing paradigm that CRISPR enzymes require guide RNA. Published in Nature Biotechnology, the DNA-guided system offers superior molecular stability, reduced off-target effects, and 100% accuracy in detecting viral RNA from clinical samples.
+              </p>
+            </article>
+
+            <article>
+              <p className="text-muted-foreground">Apr 13, 2026</p>
+              <h2 className="mt-1 text-lg font-medium text-foreground">
+                <a href="https://doi.org/10.1038/s41467-026-71624-4" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Jain Lab co-develops CODE precision genome editing system in Nature Communications
+                </a>
+              </h2>
+              <p className="mt-2 text-foreground">
+                In a collaboration between the Jain Lab (including Noah Rakestraw, Briana Pizzano, and Dr. Jain) and Princeton University, researchers introduced CODE (Chimeric Oligonucleotide-Directed Editing). Published in Nature Communications, this search-and-replace genome editing platform couples engineered nCas9-DNA polymerase fusions with chimeric guides to execute precise DNA edits without double-strand breaks.
+              </p>
+            </article>
+
+            <article>
+              <p className="text-muted-foreground">Sep 5, 2025</p>
+              <h2 className="mt-1 text-lg font-medium text-foreground">
+                <a href="https://doi.org/10.1093/nar/gkaf887" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Jain Lab discovers AsCas12a tolerates target DNA insertions in Nucleic Acids Research
+                </a>
+              </h2>
+              <p className="mt-2 text-foreground">
+                A multi-member Jain Lab study published in Nucleic Acids Research revealed that AsCas12a can tolerate target DNA insertions, providing fundamental insights into CRISPR-Cas12 target recognition mechanisms and informing guide RNA design for precision genome editing.
+              </p>
+            </article>
+
+            <article>
               <p className="text-muted-foreground">Aug 22, 2025</p>
               <h2 className="mt-1 text-lg font-medium text-foreground">
                 <a href="https://www.gainesville.com/story/news/2025/08/22/uf-scientists-work-to-create-healthier-transplant-organs/85674481007/" target="_blank" rel="noopener noreferrer" className="hover:underline">
