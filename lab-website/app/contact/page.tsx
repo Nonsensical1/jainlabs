@@ -28,9 +28,10 @@ export default function ContactPage() {
           <h2 className="text-lg font-semibold text-foreground">Office Address</h2>
           <address className="mt-4 text-foreground not-italic leading-relaxed">
             Prof. Piyush K. Jain<br />
-            1006 Center Dr., Room 329A<br />
-            Gainesville FL 32611<br />
-            Work phone: 352-294
+            Cancer & Genetics Research Complex (CGRC)<br />
+            2033 Mowry Road, Room 463<br />
+            Gainesville FL 32608<br />
+            Phone: (816) 522-1229
           </address>
         </section>
 
@@ -38,8 +39,8 @@ export default function ContactPage() {
           <h2 className="text-lg font-semibold text-foreground">Email</h2>
           <p className="mt-2 text-foreground">
             Dr. Jain:{" "}
-            <a href="mailto:pjain@ufl.edu" className="underline hover:no-underline">
-              pjain@ufl.edu
+            <a href="mailto:jainp@ufl.edu" className="underline hover:no-underline">
+              jainp@ufl.edu
             </a>
           </p>
         </section>
@@ -73,12 +74,12 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="underline hover:no-underline"
               >
-                Twitter
+                Twitter / X
               </a>
             </li>
             <li>
               <a 
-                href="https://scholar.google.com" 
+                href="https://scholar.google.com/citations?user=W4vS-2wAAAAJ" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="underline hover:no-underline"

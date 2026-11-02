@@ -19,8 +19,9 @@ export default function MembersPage() {
           <section className="mt-12">
             <h2 className="text-lg font-semibold text-foreground">Principal Investigator</h2>
             <div className="mt-4">
-              <p className="text-foreground font-medium">Piyush K. Jain, Ph.D.</p>
-              <p className="text-muted-foreground">Principal Investigator</p>
+              <p className="text-foreground font-medium text-lg">Piyush K. Jain, Ph.D.</p>
+              <p className="text-primary font-medium text-sm">Exxon Mobil Gator Alumni Faculty Endowed Professor & Associate Professor</p>
+              <p className="text-muted-foreground text-sm">Principal Investigator</p>
             </div>
           </section>
 
