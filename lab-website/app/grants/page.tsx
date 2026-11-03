@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react"
+import Image from "next/image"
 import LifeSimulation from "@/components/LifeSimulation"
 
 const grants = [
@@ -202,10 +203,15 @@ export default function GrantsPage() {
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-2 border-t border-border/30">
                         <div className="flex flex-col md:flex-row gap-5 items-start">
-                          {/* Logo placeholder */}
-                          <div className="w-20 h-20 shrink-0 bg-muted rounded-lg flex items-center justify-center overflow-hidden">
-                            {/* Replace with actual logo: <img src={grant.logo} alt={grant.sponsor} className="w-full h-full object-contain p-2" /> */}
-                            <span className="text-xs text-muted-foreground text-center px-1">Logo</span>
+                          {/* Sponsor Logo */}
+                          <div className="w-24 h-24 shrink-0 bg-white rounded-lg border border-border/40 p-2 flex items-center justify-center overflow-hidden shadow-xs relative">
+                            <Image 
+                              src={grant.logo} 
+                              alt={grant.sponsor} 
+                              width={96} 
+                              height={96} 
+                              className="w-full h-full object-contain" 
+                            />
                           </div>
 
                           {/* Description */}
