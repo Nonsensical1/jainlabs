@@ -41,9 +41,23 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       mouse.x = -1000;
       mouse.y = -1000;
     };
+    let completed = false;
+    const triggerComplete = () => {
+      if (completed) return;
+      completed = true;
+      if (onComplete) {
+        onComplete();
+      }
+    };
+
+    const handleClick = () => {
+      triggerComplete();
+    };
+
     // Add event listeners directly to canvas
     canvas.addEventListener('mousemove', handleMouseMove);
     canvas.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener('click', handleClick);
 
     const handleResize = () => {
       if (!container) return;
@@ -335,10 +349,8 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
         phase = 4;
         phaseTimer = 0;
       } else if (phase === 4 && phaseTimer > 40) {
-        if (onComplete) {
-          onComplete();
-          phaseTimer = -99999; // prevent multiple calls
-        }
+        triggerComplete();
+        phaseTimer = -99999; // prevent multiple calls
       }
 
       // Batch rendering using circles
@@ -361,6 +373,7 @@ export default function ParticleAnimation({ onComplete, className }: ParticleAni
       window.removeEventListener('resize', handleResize);
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
+      canvas.removeEventListener('click', handleClick);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
