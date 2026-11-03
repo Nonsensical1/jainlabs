@@ -202,20 +202,20 @@ export default function GrantsPage() {
                   >
                     <div className="overflow-hidden">
                       <div className="px-5 pb-5 pt-2 border-t border-border/30">
-                        <div className="flex flex-col md:flex-row gap-5 items-start">
+                        <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
                           {/* Sponsor Logo */}
-                          <div className="w-24 h-24 shrink-0 bg-white rounded-lg border border-border/40 p-2 flex items-center justify-center overflow-hidden shadow-xs relative">
+                          <div className="w-32 h-20 sm:w-36 sm:h-24 shrink-0 bg-white rounded-xl border border-border/40 p-2.5 flex items-center justify-center overflow-hidden shadow-xs relative">
                             <Image 
                               src={grant.logo} 
                               alt={grant.sponsor} 
-                              width={96} 
+                              width={144} 
                               height={96} 
                               className="w-full h-full object-contain" 
                             />
                           </div>
 
                           {/* Description */}
-                          <p className="text-sm text-foreground/80 leading-relaxed">
+                          <p className="text-sm text-foreground/85 leading-relaxed">
                             {grant.description}
                           </p>
                         </div>
