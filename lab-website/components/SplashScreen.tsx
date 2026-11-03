@@ -48,16 +48,10 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
           className={`fixed inset-0 z-[100] bg-white/60 backdrop-blur-sm transition-opacity duration-700 flex items-center justify-center cursor-pointer select-none ${
             isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
-          title="Click anywhere to skip"
         >
           {/* Layer 1: Main DNA / Text Animation */}
           <div className="relative z-10 w-full h-full">
             <ParticleAnimation onComplete={handleComplete} className="h-full" />
-          </div>
-
-          {/* Skip prompt hint */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none text-xs font-medium text-foreground/40 tracking-wider uppercase">
-            Click anywhere to skip
           </div>
         </div>
       )}
